@@ -1,0 +1,67 @@
+/* Footer */
+footer {
+  background-color: #9000ffab;
+  height: 115px;
+  color: white;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+footer .ubication img {
+  height: 80px;
+  float: left;
+}
+footer .ubication .info {
+  float: left;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+footer .contact img {
+  height: 80px;
+  float: right;
+}
+footer .contact .info {
+  float: right;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+footer .copy h2 {
+  margin-top: 28px;
+}
+
+@media (max-width: 532px) {
+  footer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .contact {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 692px) {
+  footer .copy h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  footer {
+    height: 140px;
+  }
+}
+@media (max-width: 760px) {
+  footer .contact img {
+    margin-top: 70px;
+  }
+
+  footer .copy {
+    padding-top: 80px;
+  }
+
+  footer {
+    height: 220px;
+  }
+}/*# sourceMappingURL=styles-footer.css.map */
