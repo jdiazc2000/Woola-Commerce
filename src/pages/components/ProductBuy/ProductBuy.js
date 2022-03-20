@@ -1,8 +1,8 @@
-const ProductModals= ({id,tipo,marca,imagen,color1,color2,color3,genero,descripción,precio,stock}) => {
+const ProductBuy= ({id,tipo,marca,imagen,color1,color2,color3,stock}) => {
 
     return(
         <>
-  <div className="modal fade hide" id={`exampleModa${id}`} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal fade hide" id={`exampleModalBuy${id}`} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="modal-dialog modal-dialog-centered" role="document">
     <div className="modal-content">
       <div className="modal-header">
@@ -13,14 +13,11 @@ const ProductModals= ({id,tipo,marca,imagen,color1,color2,color3,genero,descripc
       </div>
       <div className="modal-body">
           <img src={imagen} alt="product-img"/>
-          <h2>Género: <span><b>{genero}</b></span></h2>
           <p>Colores: {color1} {color2} {color3}</p>
-          <p><span><b>{descripción}</b></span></p>
-          <p>Precio: <span><b>${precio}</b></span></p>
           <p>Stock: <span><b>{stock}</b></span></p>
       </div>
       <div className="modal-footer">
-      <button type="button" className="btn btn-secondary mr-auto" data-bs-toggle="modal" data-bs-target={`#exampleModalBuy${id}`}>Comprar</button>
+      <button type="button" className="btn btn-secondary mr-auto">Procesar Compra</button>
       </div>
     </div>
   </div>
@@ -29,5 +26,4 @@ const ProductModals= ({id,tipo,marca,imagen,color1,color2,color3,genero,descripc
     )
 }
 
-export default ProductModals
-
+export default ProductBuy

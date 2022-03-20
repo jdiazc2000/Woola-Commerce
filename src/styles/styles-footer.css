@@ -19,6 +19,9 @@ footer .ubication .info {
   margin-top: 25px;
   margin-left: 5px;
 }
+footer .ubication .info p {
+  font-weight: 800;
+}
 footer .contact img {
   height: 80px;
   float: right;
@@ -27,6 +30,9 @@ footer .contact .info {
   float: right;
   margin-top: 25px;
   margin-right: 20px;
+}
+footer .contact .info p {
+  font-weight: 800;
 }
 footer .copy h2 {
   margin-top: 28px;

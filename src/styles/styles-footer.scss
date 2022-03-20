@@ -9,6 +9,8 @@ footer {
 	padding-top: 10px;
 	text-transform: uppercase;
 	
+
+
 	.ubication {
 		img {
 			height: 80px;
@@ -16,10 +18,15 @@ footer {
 		}
 		
 		.info {
+
 			float: left;
 			margin: 0 auto;
 			margin-top: 25px;
 			margin-left: 5px;
+
+			p{
+				font-weight: 800;
+			}
 		}
 	}
 	
@@ -33,6 +40,10 @@ footer {
 			float: right;
 			margin-top: 25px;
 			margin-right: 20px;
+
+			p{
+				font-weight: 800;
+			}
 		}
 	}
 	.copy {

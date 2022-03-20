@@ -1,21 +1,21 @@
 import "../styles/styles-home.scss"
 import Sales from "./sections/sales"
-import portada from "./imgs/Online report_Monochromatic.svg"
 import Footer from "./sections/footer"
 import Modals from "./sections/modals"
+import BuyModals from "./sections/modalsbuy"
+import Carousel from "./sections/carousel"
+ 
 const Home = () => {
 
     return (
     <>
-
-    <div id="Portada"> 
-        <div className="port-info">
-            <img src={portada} alt="svg-portada"/>
-        </div>
-    </div>
-     
+    <div id="Carousel">
+        <Carousel/>
+    </div>   
     <Sales/>
-    <Modals />
+    <Modals/>
+    <BuyModals/>
+   
     <Footer/>
     </>
     )
