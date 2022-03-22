@@ -4,8 +4,7 @@ import Footer from "./sections/footer"
 import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Carousel from "./sections/carousel"
-import { useState } from "react"
- 
+
 const Home = () => {
 
     return (
