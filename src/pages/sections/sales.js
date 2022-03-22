@@ -9,7 +9,7 @@ const Sales = () => {
     const [products,setProducts] = useState()
 
     useEffect(() =>{
-         get("http://localhost:3010/catalogo?Oferta_like=SI")
+         get("http://localhost:3010/catalogo?Oferta_like=")
         .then(({ data }) => setProducts(data))
         .catch(e => console.log(e))
     },[])
