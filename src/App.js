@@ -27,7 +27,7 @@ const App = () => (
       <nav  className="nav">
           <h1><span> WOOLA </span> COMMERCE</h1> <label onClick={openMenu} className="nav-toogle" title="menu">  <i className="fa fa-solid fa-caret-down"></i>  </label>
           <ul className="nav-menu">
-              <li className="nav-menu-item"><a className="nav-link" href="/"><b>Inicio</b></a></li>
+              <li className="nav-menu-item"><a className="nav-link" href="/">Inicio</a></li>
               <li className="nav-menu-item"><a className="nav-link" href="/">Sobre nosotros</a></li>
               <li className="nav-menu-item"><a className="nav-link" href="/">Catálogo</a></li>
           </ul>

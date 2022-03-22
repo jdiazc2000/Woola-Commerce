@@ -1,18 +1,16 @@
 import Aos from "aos"
 import "aos/dist/aos.css"
+import {get} from "axios"
 import { useEffect,useState } from "react"
 import Product from "../components/ProductCard/ProductCard"
-
-
 
 const Sales = () => {
 
     const [products,setProducts] = useState()
 
     useEffect(() =>{
-        fetch("http://localhost:3010/catalogo")
-        .then(response => response.json())
-        .then(data => setProducts(data))
+         get("http://localhost:3010/catalogo?Oferta_like=SI")
+        .then(({ data }) => setProducts(data))
         .catch(e => console.log(e))
     },[])
     
@@ -32,7 +30,7 @@ const Sales = () => {
             {
                 products ? 
                 (
-                    products.map(({id,tipo,marca,imagen,precio}) => (
+                    products.map(({id,tipo,marca,imagen,precio,stock,preciooferta}) => (
                         <Product
                             key = {id}
                             id={id}
@@ -40,14 +38,13 @@ const Sales = () => {
                             marca={marca}
                             imagen={imagen}
                             precio={precio}
-                            
-                        />
-                        
-                    ))
-                    
+                            preciooferta={preciooferta}
+                            stock={stock}
+                        />    
+                    ))  
                 ) 
                 
-                : (<span>Cargando Productos...</span>)
+                : (<span>Cargando ofertas...</span>)
             }    
 
         </div>

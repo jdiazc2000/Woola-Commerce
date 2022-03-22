@@ -1,4 +1,4 @@
-const ProductModals= ({id,tipo,marca,imagen,color1,color2,color3,genero,descripción,precio,stock}) => {
+const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,genero,descripción,precio,stock}) => {
 
     return(
         <>
@@ -16,7 +16,7 @@ const ProductModals= ({id,tipo,marca,imagen,color1,color2,color3,genero,descripc
           <h2>Género: <span><b>{genero}</b></span></h2>
           <p>Colores: {color1} {color2} {color3}</p>
           <p><span><b>{descripción}</b></span></p>
-          <p>Precio: <span><b>${precio}</b></span></p>
+          <p>Precio: <span><b>{preciooferta ?  `$${preciooferta}` : `$${precio}`}</b></span></p>
           <p>Stock: <span><b>{stock}</b></span></p>
       </div>
       <div className="modal-footer">

@@ -1,17 +1,20 @@
-import portada from "../imgs/Online report_Monochromatic.svg";
+import Portada1 from "../imgs/Carousel-imgs/Portada1.jpg";
+import Portada2 from "../imgs/Carousel-imgs/Portada2.jpg";
+import Portada3 from "../imgs/Carousel-imgs/Portada3.jpg";
+
 
 const Carousel = () => {
   return (
-    <div id="carouselExampleControls" className="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide carousel-fade" data-interval="true " data-bs-ride="carousel">
     <div className="carousel-inner">
-      <div className="carousel-item active">
-        <img src={portada} className="d-block w-100" alt="..."/>
+      <div className="carousel-item active" data-bs-interval="2500">
+        <img src={Portada1} className="d-block w-100" alt="..." />
       </div>
-      <div className="carousel-item">
-        <img src="https://static.mercadonegro.pe/wp-content/uploads/2021/08/26202648/ptv-app-1660x940-1.jpg" className="d-block w-100" alt="..."/>
+      <div className="carousel-item" data-bs-interval="2500">
+        <img src={Portada2} className="d-block w-100" alt="..."/>
       </div>
-      <div className="carousel-item">
-        <img src="https://sm.ign.com/t/ign_latam/news/p/pokemon-th/pokemon-the-movie-secrets-of-the-jungle-coming-to-netflix-ne_c3kp.h960.jpg" className="d-block w-100" alt="..."/>
+      <div className="carousel-item" data-bs-interval="2500">
+        <img src={Portada3} className="d-block w-100" alt="..."/>
       </div>
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

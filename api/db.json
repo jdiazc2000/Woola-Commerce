@@ -10,8 +10,9 @@
             "color3": "🟩",
             "genero": "Masculino",
             "descripción": "FUNCIONO",
-            "precio": "15.20",
-            "stock": 40,
+            "precio": "22.50",
+            "preciooferta": "15.20",
+            "stock": 0,
             "Oferta": "SI"
         },
         {
@@ -22,9 +23,10 @@
             "color1": "Rojo",
             "color2": "Amarillo",
             "color3": "Azul",
+            "preciooferta": "10.30",
+            "precio": "20.30",
             "genero": "Femenino",
             "descripción": "FUNCIONO",
-            "precio": "50.20",
             "stock": 10,
             "Oferta": "SI"
         },
@@ -36,8 +38,9 @@
             "color1": "Vaquero",
             "genero": "Femenino",
             "descripción": "Lorem impun 123",
-            "precio": "5.10",
-            "stock": 10,
+            "precio": "50.10",
+            "preciooferta": "15.20",
+            "stock": 0,
             "Oferta": "SI"
         },
         {
@@ -50,9 +53,98 @@
             "color3": "Azul",
             "genero": "Femenino",
             "descripción": "FUNCIONO",
-            "precio": "15.20",
+            "precio": "80.20",
+            "preciooferta": "10.20",
             "stock": 10,
             "Oferta": "SI"
+        },
+        {
+            "id": "5",
+            "tipo": "Casaca",
+            "marca": "Gucci",
+            "imagen": "https://i.postimg.cc/nhXFyNBy/prenda.png",
+            "color1": "Rojo",
+            "color2": "Amarillo",
+            "color3": "Azul",
+            "genero": "Femenino",
+            "descripción": "FUNCIONO",
+            "precio": "20.20",
+            "stock": 10,
+            "Oferta": "NO"
+        },
+        {
+            "id": "6",
+            "tipo": "Casaca",
+            "marca": "Gucci",
+            "imagen": "https://i.postimg.cc/nhXFyNBy/prenda.png",
+            "color1": "Rojo",
+            "color2": "Amarillo",
+            "color3": "Azul",
+            "genero": "Femenino",
+            "descripción": "FUNCIONO",
+            "precio": "30.20",
+            "stock": 10,
+            "Oferta": "NO"
+        },
+        {
+            "id": "7",
+            "tipo": "Casaca",
+            "marca": "Gucci",
+            "imagen": "https://i.postimg.cc/nhXFyNBy/prenda.png",
+            "color1": "Rojo",
+            "color2": "Amarillo",
+            "color3": "Azul",
+            "genero": "Femenino",
+            "descripción": "FUNCIONO",
+            "precio": "30.20",
+            "stock": 10,
+            "Oferta": "NO"
+        }
+        , {
+            "id": "8",
+            "tipo": "Casaca",
+            "marca": "Gucci",
+            "imagen": "https://i.postimg.cc/nhXFyNBy/prenda.png",
+            "color1": "Rojo",
+            "color2": "Amarillo",
+            "color3": "Azul",
+            "genero": "Femenino",
+            "descripción": "FUNCIONO",
+            "precio": "30.20",
+            "stock": 10,
+            "Oferta": "NO"
+        }
+    ],
+    "aboutus-items": [
+        {
+            "id": "1",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
+        },
+        {
+            "id": "2",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
+        },
+        {
+            "id": "3",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
+        },
+        {
+            "id": "4",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
+        },
+        {
+            "id": "5",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
+        },
+        {
+            "id": "6",
+            "image": "https://woola-commerce-template.netlify.app/Imgs+Svgs/Img-Bolsa.png",
+            "descripción": "https://www.proveedores.com/site/company/b7/86660/images/139117/proveedores-ropa-de-bebe_crs2.jpg"
         }
     ]
 }
