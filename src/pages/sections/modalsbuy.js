@@ -7,7 +7,7 @@ const BuyModals = () => {
     const [modalsbuy,setModalsBuy] = useState([])
 
     useEffect(() =>{
-        fetch("http://localhost:3010/catalogo")
+        fetch("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo")
         .then(response => response.json())
         .then(data => setModalsBuy(data))
         .catch(e => console.log(e))

@@ -1,3 +1,5 @@
+
+
 const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,genero,descripción,precio,stock}) => {
 
     return(
@@ -25,6 +27,10 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,ge
     </div>
   </div>
 </div>
+
+
+
+
         </>
     )
 }

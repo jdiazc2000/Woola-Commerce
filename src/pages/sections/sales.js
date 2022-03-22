@@ -9,7 +9,7 @@ const Sales = () => {
     const [products,setProducts] = useState()
 
     useEffect(() =>{
-         get("http://localhost:3010/catalogo?Oferta_like=")
+         get("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo")
         .then(({ data }) => setProducts(data))
         .catch(e => console.log(e))
     },[])
@@ -30,7 +30,7 @@ const Sales = () => {
             {
                 products ? 
                 (
-                    products.map(({id,tipo,marca,imagen,precio,stock,preciooferta}) => (
+                    products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
                         <Product
                             key = {id}
                             id={id}
@@ -38,8 +38,8 @@ const Sales = () => {
                             marca={marca}
                             imagen={imagen}
                             precio={precio}
-                            preciooferta={preciooferta}
                             stock={stock}
+                            preciooferta={preciooferta}
                         />    
                     ))  
                 ) 

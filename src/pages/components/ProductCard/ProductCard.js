@@ -1,4 +1,15 @@
+import {Button,Modal} from "react-bootstrap"
+import { useState } from "react";
+
+
+
 const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
 
     return(
     <>
@@ -13,7 +24,7 @@ const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
             </div>
     </div>
 
-   
+
     </>
 )
 }
