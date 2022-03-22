@@ -9,7 +9,7 @@ const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
                     <h2>{tipo} {marca}</h2>
                     <p>{preciooferta ?  `$${preciooferta}` : ''}  <span className="oferta"> {preciooferta ?  `$${precio}` : <p className="PrecioNormal">${precio}</p>}</span></p>
                 </div>
-        {stock == 0 ? <h3 style={{paddingTop: "10px"}}>Sin stock</h3>  : <label htmlFor="btn-modal" data-bs-toggle="modal" data-bs-target={`#exampleModa${id}`}>Comprar</label> }
+        {stock === 0 ? <h3 style={{paddingTop: "10px"}}>Sin stock</h3>  : <label htmlFor="btn-modal" data-bs-toggle="modal" data-bs-target={`#exampleModa${id}`}>Comprar</label> }
             </div>
     </div>
 
