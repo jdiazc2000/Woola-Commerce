@@ -5,11 +5,8 @@ import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Carousel from "./sections/carousel"
 import { useState } from "react"
-import {Button,Modal} from "react-bootstrap"
  
 const Home = () => {
-
-    const [show, setShow] = useState(false);
 
     return (
     <>
