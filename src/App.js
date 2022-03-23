@@ -5,17 +5,13 @@ import {BrowserRouter as Router, Route, Routes, NavLink} from "react-router-dom"
 
 
 const openMenu = () => {
-    document.querySelector(".nav-toogle").addEventListener("click", openmenuUP)
-}
-
-const openmenuUP = () =>{
   const navmenu = document.querySelector(".nav-menu");
-    navmenu.classList.toggle("nav-menu_visible");
+  navmenu.classList.toggle("nav-menu_visible");
   if (navmenu.classList.contains("nav-menu_visible")) {
          document.querySelector('body').style.overflowY = 'hidden'
   } else {
          document.querySelector('body').style.overflowY = 'scroll'
-  }
+  } 
 }
 
 const CloseMenu=() => {
