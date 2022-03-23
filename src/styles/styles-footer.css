@@ -36,6 +36,7 @@ footer .contact .info p {
 }
 footer .copy h2 {
   margin-top: 28px;
+  font-size: 35px;
 }
 
 @media (max-width: 532px) {

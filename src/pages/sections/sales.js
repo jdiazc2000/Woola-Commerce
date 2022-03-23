@@ -4,12 +4,13 @@ import {get} from "axios"
 import { useEffect,useState } from "react"
 import Product from "../components/ProductCard/ProductCard"
 
+
 const Sales = () => {
 
     const [products,setProducts] = useState()
 
     useEffect(() =>{
-         get("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo")
+         get("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo?Oferta_like=SI")
         .then(({ data }) => setProducts(data))
         .catch(e => console.log(e))
     },[])

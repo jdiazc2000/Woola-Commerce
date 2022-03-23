@@ -1,4 +1,5 @@
 import "../styles/styles-home.scss"
+import "../styles/styles-nosotros.scss"
 import Sales from "./sections/sales"
 import Footer from "./sections/footer"
 import Modals from "./sections/modals"
@@ -12,9 +13,11 @@ const Home = () => {
     <div id="Carousel">
         <Carousel/>
     </div>   
+
     <Sales/>
     <Modals/>
     <BuyModals/>
+
     <Footer/>
     
     </>

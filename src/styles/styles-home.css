@@ -20,6 +20,10 @@ p {
   font-weight: 100;
 }
 
+img, svg {
+  vertical-align: sub;
+}
+
 #Carousel {
   margin-top: 75px;
 }
@@ -89,6 +93,16 @@ p {
 .sale .info p {
   font-size: 20px;
   font-weight: bold;
+  color: red;
+}
+.sale .info .oferta {
+  color: black;
+  font-size: 15px;
+}
+.sale .info .PrecioNormal {
+  color: black;
+  -webkit-text-decoration: double;
+          text-decoration: double;
 }
 .sale label {
   position: relative;

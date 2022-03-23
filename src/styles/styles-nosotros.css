@@ -1,0 +1,78 @@
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Play", sans-serif;
+}
+
+.h2, h2 {
+  font-size: 40px;
+}
+
+/* About Us */
+#About-Us {
+  background-color: #F0F0F0;
+  height: 100%;
+  margin-top: 75px;
+  padding-bottom: 20px;
+}
+#About-Us .title {
+  padding: 5px;
+  text-align: center;
+  color: #8F00FF;
+}
+#About-Us .squares-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 10px;
+}
+#About-Us .squares-section .squares {
+  width: 300px;
+  height: 285px;
+  text-align: center;
+  margin: 0 auto;
+}
+#About-Us .squares-section .squares img {
+  width: 125px;
+  padding-top: 20px;
+}
+#About-Us .squares-section .squares h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  text-align: justify;
+}
+
+/* About Us */
+/* Ubication */
+#Ubication {
+  background-color: #F0F0F0;
+  height: 100%;
+  padding-bottom: 20px;
+}
+#Ubication .title {
+  padding: 5px;
+  text-align: center;
+  color: #8F00FF;
+  font-size: 30px;
+}
+#Ubication .map {
+  text-align: center;
+}
+#Ubication .map .iframe {
+  border: solid red 2px;
+}
+
+/* Ubication */
+@media (max-width: 990px) {
+  #About-Us .squares-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media (max-width: 655px) {
+  #About-Us .squares-section {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=styles-nosotros.css.map */
