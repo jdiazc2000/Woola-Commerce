@@ -9,14 +9,18 @@ const openMenu = () => {
 }
 
 const openmenuUP = () =>{
-const navmenu = document.querySelector(".nav-menu");
-
+  const navmenu = document.querySelector(".nav-menu");
     navmenu.classList.toggle("nav-menu_visible");
   if (navmenu.classList.contains("nav-menu_visible")) {
          document.querySelector('body').style.overflowY = 'hidden'
   } else {
          document.querySelector('body').style.overflowY = 'scroll'
   }
+}
+
+const CloseMenu=() => {
+    document.querySelector(".nav-menu").className = "nav-menu";
+    document.querySelector('body').style.overflowY = 'scroll';
 }
 
 
@@ -28,9 +32,9 @@ const App = () => (
       <nav  className="nav">
           <h1><span> WOOLA </span> COMMERCE</h1> <label onClick={openMenu} className="nav-toogle" title="menu">  <i className="fa fa-solid fa-caret-down"></i>  </label>
           <ul className="nav-menu">
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/" exact>Inicio</NavLink></li>
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/aboutus" exact>Sobre nosotros</NavLink></li>
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/" exact>Catálogo</NavLink></li>
+              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true">Inicio</NavLink></li>
+              <li className="nav-menu-item"><NavLink className="nav-link" to="/aboutus" onClick={CloseMenu} exact="true">Sobre nosotros</NavLink></li>
+              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true">Catálogo</NavLink></li>
           </ul>
       </nav>
   </header>
