@@ -20,7 +20,7 @@ const Sales = ({uripath}) => {
         }
       });
     return () => controller.abort();
-  }, []);
+  }, [uripath]);
 
     return (
     <>
