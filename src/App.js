@@ -36,9 +36,9 @@ const App = () => (
       </nav>
   </header>
     <Routes>
-          <Route path="/catalogo" element={<Catalogo uripath="catalogo"/>}/>
+          <Route path="/catalogo" element={<Catalogo/>}/>
           <Route path="/aboutus" element={<Aboutus/>}/>
-          <Route path="/" element={<Home  uripath="hoal"/>}/>
+          <Route path="/" element={<Home/>}/>
     </Routes>
 </Router>
   </>
