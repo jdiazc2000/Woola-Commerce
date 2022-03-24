@@ -6,13 +6,22 @@ const Modals = () => {
    
     const [modals,setModals] = useState([])
 
-    useEffect(() =>{
-        fetch("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo")
-        .then(response => response.json())
-        .then(data => setModals(data))
-        .catch(e => console.log(e))
-    },[])
-
+    useEffect(() => {
+        const controller = new AbortController();
+        const signal = controller.signal;
+    
+           fetch("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo", { signal: signal })
+          .then((data) => data.json())
+          .then((data) => setModals(data))
+          .catch((err) => {
+            if (err.name === "AbortError") {
+            } else {
+              console.log('Error al fetch')
+            }
+          });
+        return () => controller.abort();
+      }, []);
+    
 
     return (
     <>
@@ -41,8 +50,5 @@ const Modals = () => {
     </>
 );
 }
-
-
-      
 
 export default Modals

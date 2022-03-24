@@ -1,5 +1,6 @@
-const Map = () => {
 
+const Map = () => {
+    
     return (
 
     <div id="Ubication">
@@ -12,7 +13,6 @@ const Map = () => {
         </div>
 
     </div>
-
     )
 
 }

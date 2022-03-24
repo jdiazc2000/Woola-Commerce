@@ -50,6 +50,7 @@ nav {
 	margin-right: 40px;
     font-weight: 400;
     font-size: 21px;
+
 }
 
 .nav-link:hover{
@@ -67,6 +68,10 @@ nav {
 	margin: -8px 40px;
 	line-height: 75px;
 	width: max-content;
+
+    a:hover,a:focus{
+        color: $primary-color;
+    }
 }
 .nav-toogle {
 	color: #fff;
@@ -81,7 +86,7 @@ nav {
 }
 
 
-@media (max-width:1140px) {
+@media (max-width:1225px) {
     header {
         height: 75px;
     }

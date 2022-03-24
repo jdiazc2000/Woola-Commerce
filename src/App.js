@@ -1,6 +1,7 @@
 import './styles/styles-nav.scss';
 import Home from "./pages/home";
 import Aboutus from "./pages/aboutus";
+import Catalogo from "./pages/catalogo";
 import {BrowserRouter as Router, Route, Routes, NavLink} from "react-router-dom";
 
 
@@ -28,16 +29,16 @@ const App = () => (
       <nav  className="nav">
           <h1><span> WOOLA </span> COMMERCE</h1> <label onClick={openMenu} className="nav-toogle" title="menu">  <i className="fa fa-solid fa-caret-down"></i>  </label>
           <ul className="nav-menu">
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true">Inicio</NavLink></li>
+              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true" >Inicio</NavLink></li>
               <li className="nav-menu-item"><NavLink className="nav-link" to="/aboutus" onClick={CloseMenu} exact="true">Sobre nosotros</NavLink></li>
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true">Catálogo</NavLink></li>
+              <li className="nav-menu-item"><NavLink className="nav-link" to="/catalogo" onClick={CloseMenu} exact="true">Catálogo</NavLink></li>
           </ul>
       </nav>
   </header>
     <Routes>
-          <Route path="/catalogue" element={<catalogo/>}/>
+          <Route path="/catalogo" element={<Catalogo uripath="catalogo"/>}/>
           <Route path="/aboutus" element={<Aboutus/>}/>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home  uripath="hoal"/>}/>
     </Routes>
 </Router>
   </>

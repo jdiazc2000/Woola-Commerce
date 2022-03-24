@@ -67,6 +67,9 @@ nav h1 span {
   width: -moz-max-content;
   width: max-content;
 }
+.nav-menu-item a:hover, .nav-menu-item a:focus {
+  color: #8F00FF;
+}
 
 .nav-toogle {
   color: #fff;
@@ -80,7 +83,7 @@ nav h1 span {
   padding: 0 20px 0 20px;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1225px) {
   header {
     height: 75px;
   }

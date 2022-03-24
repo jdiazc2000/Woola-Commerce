@@ -110,7 +110,7 @@ img,svg{
 			color: $primary-color;
 			font-size: 30px;
 		}
-		p {
+		h4 {
 			font-size: 20px;
 			font-weight: bold;
 			color: red;
@@ -123,8 +123,9 @@ img,svg{
 		}
 
 		.PrecioNormal{
-			color: black;
-			text-decoration: double;
+			font-size: 20px;
+   		 	font-weight: bold;
+    		color: black;
 		}
 
 		

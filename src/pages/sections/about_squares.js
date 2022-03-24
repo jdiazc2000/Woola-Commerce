@@ -1,19 +1,8 @@
 import Aos from "aos"
 import "aos/dist/aos.css"
-import {get} from "axios"
-import { useEffect,useState } from "react"
-import Squares from "../components/about_squares/squares"
+import { useEffect } from "react"
 
 const AboutSquares = () => {
-
-    const [squares,setSquares] = useState()
-
-    useEffect(() =>{
-         get("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/aboutus-items")
-        .then(({ data }) => setSquares(data))
-        .catch(e => console.log(e))
-    },[])
-    
 
     useEffect(()=>{
         Aos.init({});
@@ -28,22 +17,35 @@ const AboutSquares = () => {
         </div>
 
         <div className="squares-section">    
-        {
-                squares ? 
-                (
-                    squares.map(({id,image,descripción}) => (
-                        <Squares
-                            key = {id}
-                            id={id}
-                            image={image}
-                            descripción={descripción}
-                        />    
-                    ))  
-                ) 
-                
-                : (<span>Cargando Squares...</span>)
-        }    
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
 
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
+
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
+
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
+
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
+
+        <div className="squares"  data-aos="zoom-in" data-aos-duration="1000">
+            <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
+        </div>
         </div>
     </div>         
     </>

@@ -90,7 +90,7 @@ img, svg {
   color: #8F00FF;
   font-size: 30px;
 }
-.sale .info p {
+.sale .info h4 {
   font-size: 20px;
   font-weight: bold;
   color: red;
@@ -100,9 +100,9 @@ img, svg {
   font-size: 15px;
 }
 .sale .info .PrecioNormal {
+  font-size: 20px;
+  font-weight: bold;
   color: black;
-  -webkit-text-decoration: double;
-          text-decoration: double;
 }
 .sale label {
   position: relative;

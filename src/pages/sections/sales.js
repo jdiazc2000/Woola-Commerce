@@ -1,60 +1,52 @@
 import Aos from "aos"
 import "aos/dist/aos.css"
-import {get} from "axios"
 import { useEffect,useState } from "react"
-import Product from "../components/ProductCard/ProductCard"
+import ProductCard from "../components/ProductCard/ProductCard"
 
 
-const Sales = () => {
+const Sales = ({uripath}) => {
+  const [products,setProducts] = useState([])
 
-    const [products,setProducts] = useState()
+  useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
 
-    useEffect(() =>{
-         get("https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo?Oferta_like=SI")
-        .then(({ data }) => setProducts(data))
-        .catch(e => console.log(e))
-    },[])
-    
-
-    useEffect(()=>{
-        Aos.init({});
-    },[]);
+       fetch(`https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/${uripath}`, { signal: signal })
+      .then((data) => data.json())
+      .then((data) => setProducts(data))
+      .catch((err) => {
+        if (err.name === "AbortError") {
+        } else {
+          console.log('Error al fetch')
+        }
+      });
+    return () => controller.abort();
+  }, []);
 
     return (
     <>
-     <div id="Ofertas">
-        <div className="title">
-            <h2>Ofertas</h2>
-        </div>
-
-        <div className="Ofertas-section" >
             {
                 products ? 
                 (
-                    products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
-                        <Product
-                            key = {id}
-                            id={id}
-                            tipo={tipo}
-                            marca={marca}
-                            imagen={imagen}
-                            precio={precio}
-                            stock={stock}
-                            preciooferta={preciooferta}
-                        />    
-                    ))  
+                  (products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
+                    <ProductCard
+                        key = {id}
+                        id={id}
+                        tipo={tipo}
+                        marca={marca}
+                        imagen={imagen}
+                        precio={precio}
+                        stock={stock}
+                        preciooferta={preciooferta}
+                    />    
+                     ))  
+                  )
+
+                 
                 ) 
                 
-                : (<span>Cargando ofertas...</span>)
-            }    
-
-        </div>
-
-        
-
-    </div>
-
-         
+                :    (<span>Cargando ofertas...</span>)
+                }     
     </>
     )
 }
