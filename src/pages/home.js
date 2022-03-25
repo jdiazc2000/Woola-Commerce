@@ -26,7 +26,6 @@ const Home = () => {
             <h2>Ofertas</h2>
         </div>
 
-
     <div id="Ofertas">
         <div className="Ofertas-section" >
             <Sales uripath={"catalogo?Oferta_like=SI"}/>

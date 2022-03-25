@@ -4,9 +4,9 @@ import ProductCard from "../components/ProductCard/ProductCard"
 
 
 const Sales = ({uripath}) => {
-  const [products,setProducts] = useState([])
+  const [products,setProducts] = useState()
 
-  useEffect(() => {
+useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
 
@@ -22,12 +22,16 @@ const Sales = ({uripath}) => {
     return () => controller.abort();
   }, [uripath]);
 
-    return (
-    <>
-            {
-                products ? 
-                (
-                  (products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
+  
+
+  return (
+  <>
+
+          {
+              products ? 
+        
+              (
+                products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
                     <ProductCard
                         key = {id}
                         id={id}
@@ -38,16 +42,16 @@ const Sales = ({uripath}) => {
                         stock={stock}
                         preciooferta={preciooferta}
                     />    
-                     ))  
-                  )
+                ))  
+            ) 
 
-                 
-                ) 
-                
-                :    (<span>Cargando ofertas...</span>)
-                }     
-    </>
-    )
+             
+              :    (<div className="loader"></div>)
+          }    
+
+       
+  </>
+  )
 }
 
 
