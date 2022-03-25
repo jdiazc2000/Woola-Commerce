@@ -22,17 +22,15 @@ const Home = () => {
             </motion.div>
         </div>
 
-    <div id="Ofertas">
         <div className="Ofertas-section" >
             <Sales uripath={"catalogo?Oferta_like=SI"}/>
         </div>  
-    </div>
     
-    <Modals/>
-    <BuyModals/>   
+        <Modals/>
+        <BuyModals/>   
     </div>
+
     <Footer/>
-    
     </>
     )
 }

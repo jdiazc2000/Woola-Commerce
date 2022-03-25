@@ -53,10 +53,6 @@ nav {
 
 }
 
-.nav-link:hover{
-    color: black;
-}
-
 .nav-menu {
 	display: flex;
 	list-style: none;
@@ -68,11 +64,8 @@ nav {
 	margin: -8px 40px;
 	line-height: 75px;
 	width: max-content;
-
-    a:hover,a:focus{
-        color: $primary-color;
-    }
 }
+
 .nav-toogle {
 	color: #fff;
 	background: 0 0;

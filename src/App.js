@@ -30,9 +30,19 @@ const App = () => (
       <nav  className="nav">
       <motion.div initial={{x:0}} animate={{ x: 30 }} transition={{ type: "spring", stiffness: 100}}> <h1><span>WOOLA</span> COMMERCE</h1> </motion.div><label onClick={openMenu} className="nav-toogle" title="menu">  <i className="fa fa-solid fa-caret-down"></i>  </label>
           <ul className="nav-menu">
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/" onClick={CloseMenu} exact="true" >Inicio</NavLink></li>
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/aboutus" onClick={CloseMenu} exact="true">Sobre nosotros</NavLink></li>
-              <li className="nav-menu-item"><NavLink className="nav-link" to="/catalogo" onClick={CloseMenu} exact="true">Catálogo</NavLink></li>
+
+              <li className="nav-menu-item"><NavLink to="/" onClick={CloseMenu} exact="true"  className="nav-link" 
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold'} : {color: 'black'})}
+              >Inicio</NavLink></li>
+
+              <li className="nav-menu-item"><NavLink to="/aboutus" onClick={CloseMenu} exact="true"  className="nav-link"
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold'} : {color: 'black'})}
+              >Sobre nosotros</NavLink></li>
+
+              <li className="nav-menu-item"><NavLink to="/catalogo" onClick={CloseMenu} exact="true"  className="nav-link"
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold'} : {color: 'black'})}
+              >Catálogo</NavLink></li>
+
           </ul>
       </nav>
   </header>
