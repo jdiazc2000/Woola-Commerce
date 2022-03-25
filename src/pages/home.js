@@ -6,15 +6,9 @@ import Footer from "./sections/footer"
 import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Carousel from "./sections/carousel"
-import { useEffect } from "react"
-import Aos from "aos"
+import { motion } from "framer-motion"
 
 const Home = () => {
-
-    useEffect(() =>{
-        Aos.init();
-    })
-
     return (
     <>
     <div id="Carousel">
@@ -23,7 +17,9 @@ const Home = () => {
      
     <div id="Ofertas">
         <div className="title">
-            <h2>Ofertas</h2>
+           <motion.div initial={{x:-40}} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100}}>
+                <h2>Ofertas</h2>
+            </motion.div>
         </div>
 
     <div id="Ofertas">

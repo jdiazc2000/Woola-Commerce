@@ -1,10 +1,11 @@
 import "aos/dist/aos.css"
 import { useEffect,useState } from "react"
 import ProductCard from "../components/ProductCard/ProductCard"
-
+import { motion } from "framer-motion"
 
 const Sales = ({uripath}) => {
   const [products,setProducts] = useState()
+
 
 useEffect(() => {
     const controller = new AbortController();
@@ -22,8 +23,6 @@ useEffect(() => {
     return () => controller.abort();
   }, [uripath]);
 
-  
-
   return (
   <>
 
@@ -32,8 +31,8 @@ useEffect(() => {
         
               (
                 products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
-                    <ProductCard
-                        key = {id}
+                    <motion.div  key = {id} initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }} >
+                      <ProductCard
                         id={id}
                         tipo={tipo}
                         marca={marca}
@@ -41,7 +40,8 @@ useEffect(() => {
                         precio={precio}
                         stock={stock}
                         preciooferta={preciooferta}
-                    />    
+                      />
+                    </motion.div>    
                 ))  
             ) 
 

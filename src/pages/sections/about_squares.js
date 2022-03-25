@@ -1,5 +1,6 @@
 import Aos from "aos"
 import "aos/dist/aos.css"
+import { motion } from "framer-motion"
 import { useEffect } from "react"
 
 const AboutSquares = () => {
@@ -13,7 +14,9 @@ const AboutSquares = () => {
     <>  
     <div id="About-Us">
         <div className="title">
+        <motion.div initial={{x:-40}} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100}}>
             <h2>Sobre nosotros</h2>
+        </motion.div>
         </div>
 
         <div className="squares-section">    

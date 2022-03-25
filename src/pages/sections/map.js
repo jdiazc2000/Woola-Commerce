@@ -1,11 +1,14 @@
+import { motion } from "framer-motion"
+
 
 const Map = () => {
-    
-    return (
 
+    return (
     <div id="Ubication">
         <div className="title">
+        <motion.div initial={{x:-40}} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100}}>
             <h2>Ubicación</h2>
+        </motion.div>
         </div>
         
         <div className="map">

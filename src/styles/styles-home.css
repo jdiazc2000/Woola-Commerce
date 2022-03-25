@@ -83,7 +83,7 @@ img, svg {
   border-top-color: var(--clr);
 }
 #Ofertas .loader:before {
-  z-index: 100;
+  z-index: 1;
   -webkit-animation: spin 1s infinite;
           animation: spin 1s infinite;
 }
