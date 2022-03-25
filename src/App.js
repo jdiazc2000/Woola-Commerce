@@ -3,7 +3,7 @@ import Home from "./pages/home";
 import Aboutus from "./pages/aboutus";
 import Catalogo from "./pages/catalogo";
 import { motion } from "framer-motion"
-import {BrowserRouter as Router, Route, Routes, NavLink} from "react-router-dom";
+import {HashRouter  as Router, Route, Routes, NavLink} from "react-router-dom";
 
 
 const openMenu = () => {
