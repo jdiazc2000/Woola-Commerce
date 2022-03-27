@@ -6,8 +6,7 @@ import { motion } from "framer-motion"
 const Sales = ({uripath}) => {
   const [products,setProducts] = useState()
 
-
-useEffect(() => {
+  useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
 

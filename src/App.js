@@ -21,9 +21,7 @@ const CloseMenu=() => {
     document.querySelector('body').style.overflowY = 'scroll';
 }
 
-
 const App = () => (
- 
  <>
  <Router>
     <header id="header">

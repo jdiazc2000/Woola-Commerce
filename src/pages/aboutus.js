@@ -7,7 +7,6 @@ const AboutUs = () => {
     return(
     <>
     <AboutSquares/>
-    <Map/>
     <Footer/>
     </>
     )

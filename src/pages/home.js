@@ -1,6 +1,4 @@
 import "../styles/styles-home.scss"
-import "../styles/styles-nosotros.scss"
-import "../styles/styles-catalogo.scss"
 import Sales from "./sections/sales"
 import Footer from "./sections/footer"
 import Modals from "./sections/modals"
@@ -15,9 +13,11 @@ const Home = () => {
 
     useEffect(() =>{
         setLoading(true);
-        setTimeout(() =>{
+        const TimeOnScreen = setTimeout(() =>{
             setLoading(false)
         },1000)
+
+        return () => clearTimeout(TimeOnScreen)
     },[])
 
     return (

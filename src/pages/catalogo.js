@@ -3,7 +3,9 @@ import Sales from "./sections/sales"
 import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Footer from "./sections/footer"
+import "../styles/styles-catalogo.scss"
 import { motion } from "framer-motion"
+import "../styles/styles-nosotros.scss"
 
 const Catalogo = () => {
 
