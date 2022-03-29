@@ -1,34 +1,33 @@
 import "../../styles/styles-footer.scss"
-import ubication from "../imgs/Ubication.svg"
-import message from "../imgs/Message.svg"
 
 const Footer = () => {
 
     return (
-<footer>
-    <div className="ubication">
-        <img src={ubication} alt="ubication"/>
-        <div className="info">
-        <b>
-            <p>CEL: (51) 997621217</p>
-            <p>DIR: Av. la Marina 2000</p>
-        </b>
-         </div>
-    </div>
+<footer className="footer-distributed">
 
-    <div className="contact">
-        <img src={message} alt="ubication"/>
-        <div className="info">
-            <b>
-            <p>(IG) : WOOLACOMMERCE_PE</p>
-            <p>(FB) : WOOLACOMMERCE_PE</p>
-            </b>
-         </div>
-    </div>
+<div className="footer-right">
 
-    <div className="copy">
-        <h2>WOOLA COMMERCE © TODOS LOS DERECHOS RESERVADOS</h2>
-    </div>
+    <a href="#/"><i className="fa fa-facebook"></i></a>
+    <a href="#/"><i className="fa fa-twitter"></i></a>
+    <a href="#/"><i className="fa fa-instagram"></i></a>
+    <a href="#/"><i className="fa fa-map"></i></a>
+
+</div>
+
+<div className="footer-left">
+
+    <p className="footer-links">
+        <a className="link-1" href="#/">Inicio</a> -
+
+        <a href="#/">Sobre nosotros</a> -
+
+        <a href="#/">Catálogo</a>
+
+    </p>
+
+    <p> WOOLA COMMERCE &copy; TODOS LOS DERECHOS RESERVADOS</p>
+</div>
+
 </footer>
 )
 

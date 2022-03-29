@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import {useState,useEffect} from "react"; 
 import GridLoader from "react-spinners/GridLoader"
 
+
 const Home = () => {
     const [loading,setLoading] = useState(false);
 

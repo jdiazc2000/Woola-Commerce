@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
 
+
 $primary-color: #8F00FF;
 
 *{
@@ -22,6 +23,10 @@ a{
 p{
 	margin-bottom: 0px;
 	font-weight: 100;
+}
+
+button,input,optgroup,select,textarea{
+	line-height: normal;
 }
 
 img,svg{
@@ -74,7 +79,6 @@ img,svg{
     .title {
 		text-align: center;
 		
-
 		h2{
 			color: $primary-color;
 			font-size: 40px;
@@ -226,18 +230,16 @@ img,svg{
 	.modal-title{
 		margin: 0 auto;
 		color: $primary-color;
+		text-shadow: 0px 2px 4px rgba(145,145,145,0.89);
 	}
 }
 
 .close{
 	color: $primary-color;
-	width: 9%;
-	height: 35px;
+	width: 8%;
 	border: solid $primary-color 2px;
 	background-color: white;
 	border-radius: 10px;
-	
-
 	span{
 		font-size: 30px;
 	}
@@ -255,19 +257,23 @@ img,svg{
 	margin: 0 auto;
 
 	button{
-		color: white;
-		background-color: $primary-color;
+		color: $primary-color;
+		font-weight: 900;
+		background-color: white;
+		transition: ease-out 0.5s;
+		border: 2px solid $primary-color;
 		border-radius: 10px;
-		border: 1px $primary-color solid;
+	
+		&:hover {
+			color: white;
+			box-shadow: inset 0 -100px 0 0 #931deeab;
+			border: 2px solid $primary-color;
+		}
+		&:active {
+			transform: scale(0.9);
+		}
 	}
 
-	button:hover,button:focus{
-		color: $primary-color;
-		background-color: white;
-		border-radius: 10px;
-		border: solid 2px $primary-color;
-		transition: 0.5s;
-	}
 }
 
 @media (max-width: 447px){
