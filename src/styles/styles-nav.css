@@ -46,6 +46,7 @@ nav h1 span {
   margin-right: 40px;
   font-weight: 400;
   font-size: 21px;
+  height: 83px;
 }
 
 .nav-menu {
@@ -62,6 +63,7 @@ nav h1 span {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  text-align: center;
 }
 
 .nav-toogle {

@@ -2,8 +2,8 @@ const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
 
     return(
     <>
-    <div className="sale-item" >
-            <div className="sale articulo" >
+    <div className="sale-item articulo" >
+            <div className="sale" >
                 <img src={imagen} alt="prenda"/>
                 <div className="info">
                     <h2>{tipo} {marca}</h2>

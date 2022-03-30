@@ -20,8 +20,23 @@ p {
   font-weight: 100;
 }
 
+button, input, optgroup, select, textarea {
+  line-height: normal;
+}
+
 img, svg {
   vertical-align: sub;
+}
+
+.LOADERPAGE {
+  margin-top: 80px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 #Carousel {
@@ -55,14 +70,18 @@ img, svg {
   text-align: center;
 }
 #Ofertas .title h2 {
+  text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
   color: #8F00FF;
   font-size: 40px;
   padding: 10px;
 }
 #Ofertas .Ofertas-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 #Ofertas .loader {
   --clr: #8F00FF;
@@ -186,12 +205,12 @@ img, svg {
 .modal-content .modal-title {
   margin: 0 auto;
   color: #8F00FF;
+  text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 }
 
 .close {
   color: #8F00FF;
-  width: 9%;
-  height: 35px;
+  width: 8%;
   border: solid #8F00FF 2px;
   background-color: white;
   border-radius: 10px;
@@ -211,17 +230,20 @@ img, svg {
   margin: 0 auto;
 }
 .modal-footer button {
-  color: white;
-  background-color: #8F00FF;
-  border-radius: 10px;
-  border: 1px #8F00FF solid;
-}
-.modal-footer button:hover, .modal-footer button:focus {
   color: #8F00FF;
+  font-weight: 900;
   background-color: white;
+  transition: ease-out 0.5s;
+  border: 2px solid #8F00FF;
   border-radius: 10px;
-  border: solid 2px #8F00FF;
-  transition: 0.5s;
+}
+.modal-footer button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #931deeab;
+  border: 2px solid #8F00FF;
+}
+.modal-footer button:active {
+  transform: scale(0.9);
 }
 
 @media (max-width: 447px) {

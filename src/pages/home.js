@@ -48,7 +48,8 @@ const Home = () => {
                 </motion.div>
             </div>
 
-            <div className="Ofertas-section" >
+
+            <div className="Ofertas-section">
                 <Sales uripath={"catalogo?Oferta_like=SI"}/>
             </div>  
     
