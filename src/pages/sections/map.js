@@ -16,7 +16,7 @@ const Map = () => {
             { 
 
             <div style={{ display:"grid", placeItems:"center", margin:"0 auto",border: "solid black 2px", width:"80%", height:"450px"}}>
-                <h1>MAP BOX EXAMPLE</h1>
+                <h1>BOX MAP EXAMPLE</h1>
             </div>
             
             /*    

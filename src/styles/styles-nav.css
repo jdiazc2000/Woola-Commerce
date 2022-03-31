@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
 ol, ul {
@@ -22,8 +22,12 @@ header {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: black;
   text-decoration: none;
   margin: 0 auto;
@@ -31,10 +35,12 @@ nav {
   margin-left: 5%;
   margin-right: 5%;
 }
+
 nav h1 {
   line-height: 75px;
   font-size: 37px;
 }
+
 nav h1 span {
   color: #8F00FF;
 }
@@ -50,6 +56,8 @@ nav h1 span {
 }
 
 .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   float: left;
@@ -82,10 +90,14 @@ nav h1 span {
   header {
     height: 75px;
   }
-
   .nav-menu {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: white;
     position: fixed;
     left: 69px;
@@ -93,14 +105,13 @@ nav h1 span {
     height: 100%;
     overflow-y: auto;
     left: 100%;
-    transition: left 0.4s;
+    -webkit-transition: left .4s;
+    transition: left .4s;
     top: 75px;
   }
-
   .nav-menu-item {
     line-height: 70px;
   }
-
   .nav-link {
     margin-right: 0px;
   }
@@ -108,12 +119,10 @@ nav h1 span {
     background: 0 0;
     background-color: #c9b7b665;
   }
-
   .nav-menu-link_active {
     background: 0 0;
     background-color: #c9b7b665;
   }
-
   .nav-toogle {
     display: block;
     margin-left: 5px;
@@ -122,7 +131,6 @@ nav h1 span {
   .nav-toogle:focus:not(:focus-visible) {
     outline: 0;
   }
-
   .nav-menu_visible {
     left: 0;
     z-index: 1;
@@ -131,14 +139,18 @@ nav h1 span {
     background-color: white;
   }
 }
+
 @media (max-width: 468px) {
   nav h1 {
     font-size: 30px;
   }
 }
+
 @media (max-width: 395px) {
   nav h1 {
     font-size: 25px;
   }
 }
-/*NAVBAR*//*# sourceMappingURL=styles-nav.css.map */
+
+/*NAVBAR*/
+/*# sourceMappingURL=styles-nav.css.map */

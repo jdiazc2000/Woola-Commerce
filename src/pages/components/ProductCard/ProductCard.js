@@ -12,8 +12,6 @@ const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
         {stock === 0 ? <h3 style={{paddingTop: "10px"}}>Sin stock</h3>  : <label htmlFor="btn-modal" data-bs-toggle="modal" data-bs-target={`#exampleModa${id}`}>Comprar</label> }
             </div>
     </div>
-
-
     </>
 )
 }

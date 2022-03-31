@@ -5,36 +5,18 @@ import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Carousel from "./sections/carousel"
 import { motion } from "framer-motion"
-import {useState,useEffect} from "react"; 
-import GridLoader from "react-spinners/GridLoader"
-
 
 const Home = () => {
-    const [loading,setLoading] = useState(false);
 
-    useEffect(() =>{
-        setLoading(true);
-        const TimeOnScreen = setTimeout(() =>{
-            setLoading(false)
-        },1000)
-
-        return () => clearTimeout(TimeOnScreen)
-    },[])
-
+    const scrollToTop = () =>{
+        window.scrollTo({
+          top: 0, 
+          behavior: 'smooth'
+        });
+      };
+    
     return (
     <>
-    {
-        loading ?   
-      <div className="LOADERPAGE">  
-        <GridLoader
-            size={30}
-            color="#8F00FF"
-            loading={loading}
-            margin={10}
-        />
-      </div>  
-
-        : 
 <div>          
     <div id="Carousel">
         <Carousel/>
@@ -48,19 +30,21 @@ const Home = () => {
                 </motion.div>
             </div>
 
-
             <div className="Ofertas-section">
                 <Sales uripath={"catalogo?Oferta_like=SI"}/>
             </div>  
-    
+
+            <div className="Catalogo-button">
+                    <button id="Catalogo_Label"><a href="/#/catalogo" onClick={scrollToTop}>Catálogo</a></button>
+            </div>
+
             <Modals/>
             <BuyModals/>   
 
     </div>
     
-        <Footer/>
+            <Footer/>
 </div>
-    }
     </>
     )
 }
