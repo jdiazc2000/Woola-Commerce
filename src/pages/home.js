@@ -5,6 +5,7 @@ import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import Carousel from "./sections/carousel"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const Home = () => {
 
@@ -34,8 +35,8 @@ const Home = () => {
                 <Sales uripath={"catalogo?Oferta_like=SI"}/>
             </div>  
 
-            <div className="Catalogo-button">
-                    <button id="Catalogo_Label"><a href="/#/catalogo" onClick={scrollToTop}>Catálogo</a></button>
+            <div className="Catalogo-button">      
+                <Link to="/catalogo"><button id="Catalogo_Label" onClick={scrollToTop}><a>Catálogo</a></button></Link>
             </div>
 
             <Modals/>
