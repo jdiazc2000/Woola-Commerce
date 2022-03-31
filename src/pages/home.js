@@ -36,7 +36,7 @@ const Home = () => {
             </div>  
 
             <div className="Catalogo-button">      
-                <Link to="/catalogo"><button id="Catalogo_Label" onClick={scrollToTop}><a>Catálogo</a></button></Link>
+                <Link to="/catalogo"><button id="Catalogo_Label" onClick={scrollToTop}><p>Catálogo</p></button></Link>
             </div>
 
             <Modals/>
