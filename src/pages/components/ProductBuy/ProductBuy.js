@@ -1,7 +1,21 @@
 import "../../../styles/styles-catalogo.scss"
+import { Fragment } from "react"
+import { useForm } from "react-hook-form"
+import Swal from "sweetalert2"
 
+const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, talla }) => {
 
-const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock,talla }) => {
+  const { register, formState: { errors }, reset, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.table(data)
+    reset()
+    Swal.fire(
+      'Compra realizada',
+      'Pronto nos comunicaremos contigo :)',
+      'success'
+    )
+  }
 
   return (
     <>
@@ -10,85 +24,123 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock,tal
           <div className="modal-content">
             <div className="modal-header">
 
-            <h1 className="modal-title" id={`exampleModalLabel-buy${id}`}>
-              <div className="buy-title-form">
+              <h1 className="modal-title" id={`exampleModalLabel-buy${id}`}>
+                <div className="buy-title-form">
+
+                  <div className="buy-title">
                     <p><b>Formulario de compra</b></p>
-                <div>
-                    <span><img src="https://img.icons8.com/color/36/000000/visa.png" alt="visa-png"/></span> 
-                    <span><img src="https://img.icons8.com/color/36/000000/mastercard.png" alt="mastercard-png"/></span>
+                  </div>
+
+
                 </div>
-              </div>
-            </h1>
+              </h1>
 
             </div>
             <div className="modal-body">
 
-            <div className="buy-title">
-                  <h4>{tipo} {marca}</h4>
-            </div>
+              <div className="buy-title">
+                <h4>{tipo} {marca}</h4>
+              </div>
 
               <div className="modal-img">
                 <img src={imagen} alt="product-img" />
               </div>
 
+              <Fragment>
+                <form id={`Formulario-producto-buy${id}`} onSubmit={handleSubmit(onSubmit)}>
 
-              <form>
-                <div className="Comboboxes">
-
-                <label htmlFor="colors">Color:</label>
-                  <select name="colors" id={`colors-buy-form${id}`} title="color-form">
-                    <option>{color1}</option>
-                    <option>{color2}</option>
-                    <option>{color3}</option>
+                  <select style={{ display: "none" }} name="id_product" title="id_product" {...register('id_product')}>
+                    <option defaultValue={id}>{id}</option>
                   </select>
 
-                <label htmlFor="tallas">Talla:</label>
-                  <select name="tallas" id={`tallas-buy-form${id}`} title="talla-form">
-                    <option>{talla}</option>
-                  </select>
+                  <div className="Comboboxes">
+                    <div className="Color_div">
+                      <label htmlFor="colors">Color:</label>
+                      <select name="colors" className="select-color" title="color-form" {...register('colors')}>
+                        <option defaultValue={color1}>{color1}</option>
+                        <option value={color2}>{color2}</option>
+                        <option value={color3}>{color3}</option>
+                      </select>
+                    </div>
 
-                <label htmlFor="amount">Cantidad:</label>
-                  <input type="number" defaultValue="1" min="1" max={stock} title="stock-buy" />
-                </div>
+                    <label htmlFor="talla">Talla:</label>
+                    <select name="talla" title="talla-form"  {...register('talla')}>
+                      <option defaultValue={talla}>{talla}</option>
+                    </select>
 
-                <div className="name-last">
-                  <p>Datos del titular:</p>
-                  <input type="text" name="nomb-apell" id={`name-lastname-form-buy${id}`} placeholder="Nombre y apellido" />
-                </div>
-
-                <div className="creditcard-info">
-
-                  <p>Datos de tarjeta:</p>
-                  <input type="text" name="creditcard-number" id={`creditcard-number-form-buy${id}`} placeholder="0000 0000 0000 0000" />
-
-                  <div className="expi-ccv">
-                    <input type="text" name="creditcard-expdate" id={`creditcard-expdate-form-buy${id}`} placeholder="Exp: 00/00" />
-                    <input type="text" name="creditcard-ccv" id={`creditcard-ccv-form-buy${id}`} placeholder="CCV" />
+                  <label htmlFor="amount">Cantidad:</label>
+                    <input type="number" defaultValue="1" min="1" max={stock} title="stock-buy" {...register('stock-buy')} />
                   </div>
 
-                  <div className="email">
-                    <p>Correo electrónico</p>
-                    <input type="text" name="email" id={`email-form-buy${id}`} placeholder="Correo" />
+                  <div className="name-last">
+                    <p>Datos del titular:</p>
+                    <input type="text" name="nomb_apell" className="invalid" id={`name-lastname-form-buy${id}`} placeholder="Nombre y apellido"
+                      {...register('nomb_apell', { required: true, pattern: /^[^\s]+( [^\s]+)+$/ })} />
+                    {errors.nomb_apell?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                    {errors.nomb_apell?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese nombres y apellidos validos</span>}
                   </div>
 
-                  <div className="direction">
-                    <p>Dirección</p>
-                    <input type="text" name="direction" id={`direction-form-buy${id}`} placeholder="Dirección" />
+                  <div className="creditcard-info">
+
+                    <p>Datos de tarjeta:</p>
+                    <input type="text" name="creditcard_number" placeholder="0000000000000000"
+                      {...register('creditcard_number', { required: true, pattern: /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/ })} />
+                    {errors.creditcard_number?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                    {errors.creditcard_number?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese número de tarjeta válido</span>}
+
+
+                    <div className="expi-ccv">
+
+                      <input type="text" name="creditcard_expdate" placeholder="Exp: 00/00"
+                        {...register('creditcard_expdate', { required: true, pattern: /^(0[1-9]|1[0-2])\/?([0-9]{2})$/ })} />
+                      {errors.creditcard_expdate?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                      {errors.creditcard_expdate?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese una fecha de expiración válida</span>}
+
+
+                      <input type="text" name="creditcard_ccv" placeholder="CCV"
+                        {...register('creditcard_ccv', { required: true, pattern: /^[0-9]{3,4}$/ })} />
+                      {errors.creditcard_ccv?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                      {errors.creditcard_ccv?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese un CCV válido</span>}
+
+                    </div>
+
+                    <div className="email">
+                      <p>Correo electrónico</p>
+                      <input type="text" name="email_form_buy" placeholder="Correo"
+                        {...register('email_form_buy', { required: true, pattern: /([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z-0-9]{2,4})/ })} />
+                      {errors.email_form_buy?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                      {errors.email_form_buy?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese un email válido</span>}
+                    </div>
+
+                    <div className="direction">
+                      <p>Dirección</p>
+                      <input type="text" name="direction" placeholder="Dirección"
+                        {...register('direction', { required: true })} />
+                      {errors.direction?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                    </div>
                   </div>
-                </div>
-              </form>
 
 
+
+
+
+                  <div className="modal-footer" style={{ justifyContent: "center" }}>
+                    <button className="btn btn-secondary mr-auto">Procesar Compra</button>
+                    <label className="btn btn-secondary mr-auto volver-btn" data-bs-dismiss="modal" >Volver</label>
+                  </div>
+
+                </form>
+              </Fragment>
             </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary mr-auto">Procesar Compra</button>
-              <button type="button" className="btn btn-secondary mr-auto"  data-bs-dismiss="modal" >Volver</button>
-            </div> 
           </div>
         </div>
       </div>
     </>
+
   )
+
 }
+
+
 
 export default ProductBuy
