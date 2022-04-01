@@ -2,12 +2,11 @@
 import { useEffect,useState } from "react"
 import ProductCard from "../components/ProductCard/ProductCard"
 import { motion } from "framer-motion"
-import Skeleton from "react-loading-skeleton"
-import 'react-loading-skeleton/dist/skeleton.css'
+import CardSqueleton from "../components/ProductCard-Squeleton/CardSqueleton"
+
 
 const Sales = ({uripath}) => {
   const [products,setProducts] = useState()
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -25,73 +24,6 @@ const Sales = ({uripath}) => {
     return () => controller.abort();
   }, [uripath]);
 
-
-useEffect(() =>{
-    setLoading(true);
-    const TimeOnScreen = setTimeout(() =>{
-        setLoading(false)
-    },1000)
-    return () => clearTimeout(TimeOnScreen)
-},[])
-
-
-
-const loader = () => {
-  return(
-    <>
-  <div className="sale-item articulo">
-    <div className="sale" >
-        <Skeleton  width={200} height={200}/>
-        <div className="info">   
-            <h2 style={{paddingTop:"25px"}}><Skeleton width={200}/></h2>
-            <h4><Skeleton width={200}/></h4>
-        </div>
-        <Skeleton width={150} height={40} borderRadius={10}/>
-    </div>
-  </div>
-
-  <div className="sale-item articulo">
-    <div className="sale" >
-        <Skeleton  width={200} height={200}/>
-        <div className="info">   
-            <h2 style={{paddingTop:"25px"}}><Skeleton width={200}/></h2>
-            <h4><Skeleton width={200}/></h4>
-        </div>
-        <Skeleton width={150} height={40} borderRadius={10}/>
-    </div>
-  </div>
-
-  <div className="sale-item articulo">
-    <div className="sale" >
-        <Skeleton  width={200} height={200}/>
-        <div className="info">   
-            <h2 style={{paddingTop:"25px"}}><Skeleton width={200}/></h2>
-            <h4><Skeleton width={200}/></h4>
-        </div>
-        <Skeleton width={150} height={40} borderRadius={10}/>
-    </div>
-  </div>
-
-  <div className="sale-item articulo" >
-    <div className="sale" >
-        <Skeleton  width={200} height={200}/>
-        <div className="info">   
-            <h2 style={{paddingTop:"25px"}}><Skeleton width={200}/></h2>
-            <h4><Skeleton width={200}/></h4>
-        </div>
-        <Skeleton width={150} height={40} borderRadius={10}/>
-    </div>
-  </div>
-
-    </>
-  )
-}
-
-if(loading){
-  return(
-    loader()
-  )
-}else{
   return (
   <>
           {
@@ -114,13 +46,20 @@ if(loading){
             ) 
 
              
-              :    (<h1>Cargando...</h1>)
+              :    (  
+                <>
+                <CardSqueleton/>
+                <CardSqueleton/>
+                <CardSqueleton/>
+                <CardSqueleton/>
+                </>
+            )
           }    
 
        
   </>
   )
 }
-}
+
 
 export default Sales

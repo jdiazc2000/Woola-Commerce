@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-
+import AboutUsSquares from "../components/Squares/AboutSquares"
 
 const AboutSquares = () => {
 
@@ -13,51 +13,15 @@ const AboutSquares = () => {
         </div>
 
     <div className="squares-section">    
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div>
-       
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div>
 
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div>
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
 
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div>
-
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div>
-
-    <motion.div  initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }}>
-            <div className="squares" >
-                <img src="https://i.imgur.com/gn6guaA.png" alt="good-things"/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum</h2>
-            </div>
-    </motion.div> 
-       
-
-
-       
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
+    <AboutUsSquares img="https://i.imgur.com/gn6guaA.png" descrip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum"/>
+             
     </div>
     </div>         
     </>

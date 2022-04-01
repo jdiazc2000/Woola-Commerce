@@ -7,10 +7,10 @@ const Footer = () => {
 
 <div className="footer-right">
 
-    <a href="#/"><i className="fa fa-facebook"></i></a>
-    <a href="#/"><i className="fa fa-twitter"></i></a>
-    <a href="#/"><i className="fa fa-instagram"></i></a>
-    <a href="#/"><i className="fa fa-map"></i></a>
+    <a href="#/"><i className="fa fa-facebook" title="facebook-link"></i></a>
+    <a href="#/"><i className="fa fa-twitter" title="twitter-link"></i></a>
+    <a href="#/"><i className="fa fa-instagram" title="instagram-link"></i></a>
+    <a href="#/"><i className="fa fa-map" title="map-link"></i></a>
 
 </div>
 
