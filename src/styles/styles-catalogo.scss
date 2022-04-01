@@ -1,14 +1,11 @@
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-
 $primary-color: #8F00FF;
 
-html{
+html {
 	min-height: 100%;
 	position: relative;
 }
 
-*:focus{
+*:focus {
 	outline: none;
 }
 
@@ -25,6 +22,7 @@ html{
 	height: 100%;
 	margin-top: 75px;
 	padding-bottom: 10px;
+
 	.title {
 		padding: 5px;
 		text-align: center;
@@ -32,10 +30,12 @@ html{
 		font-size: 30px;
 		text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 	}
+
 	.input {
 		outline: none !important;
 		text-align: center;
 		height: 80px;
+
 		input {
 			margin-top: 13px;
 			width: 60%;
@@ -53,7 +53,7 @@ html{
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-		min-height:330px;
+		min-height: 330px;
 		width: 70%;
 		margin: 0 auto;
 
@@ -63,9 +63,10 @@ html{
 			width: 150px;
 			height: 150px;
 			position: relative;
-		   }
-		   
-		   .loader:before, .loader:after {
+		}
+
+		.loader:before,
+		.loader:after {
 			content: "";
 			position: absolute;
 			top: 0;
@@ -75,34 +76,34 @@ html{
 			border-radius: 100%;
 			border: 10px solid transparent;
 			border-top-color: var(--clr);
-		   }
-		   
-		   .loader:before {
+		}
+
+		.loader:before {
 			z-index: 1;
 			animation: spin 1s infinite;
-		   }
-		   
-		   .loader:after {
+		}
+
+		.loader:after {
 			border: 10px solid #ccc;
-		   }
-		   
-		   @keyframes spin {
+		}
+
+		@keyframes spin {
 			0% {
-			 -webkit-transform: rotate(0deg);
-			 -ms-transform: rotate(0deg);
-			 -o-transform: rotate(0deg);
-			 transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
 			}
-		   
+
 			100% {
-			 -webkit-transform: rotate(360deg);
-			 -ms-transform: rotate(360deg);
-			 -o-transform: rotate(360deg);
-			 transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				transform: rotate(360deg);
 			}
-		   }
-		
-		   .sale {
+		}
+
+		.sale {
 			width: 250px;
 			height: 370px;
 			text-align: center;
@@ -116,16 +117,11 @@ html{
 		.sale:hover {
 			border: $primary-color 0.2em solid;
 			transition: border 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		   }
+		}
 	}
 }
 
 
-@media (max-width: 1535px){
-	#Catalogo .Catalogo-section {
-		height: 100%;
-	}
-}
 
 .filtro {
 	display: none;
@@ -135,6 +131,7 @@ html{
 	.sale-item {
 
 		padding: 5px 5px;
+
 		.sale {
 			img {
 				width: 70%;
@@ -149,6 +146,7 @@ html{
 		h2 {
 			color: $primary-color;
 		}
+
 		p {
 			font-size: 20px;
 			font-weight: bold;
@@ -156,217 +154,137 @@ html{
 	}
 }
 
-
-.eins-modal-content{
-	border: solid $primary-color 2px;
-}
-
-.eins-modal-close{
-	color: $primary-color;
-}
-
-.buy-modal{
-	border: solid 2px $primary-color;
-	text-align: center;
-	height: 100%;
+.buy-title-form{
+	margin-bottom: 5px;
 	display: flex;
-
-		.buy-title{
-			border-bottom: solid 2px $primary-color;
-			margin-bottom: 5px;
-			display: flex;
-			justify-content: center;
-
-			p{
-				margin-bottom: 5px;
-				font-size: 25px;
-				margin-right: 43px;
-			}
-
-			span img{
-				margin-top: -2px;
-				text-align: center;
-			}
-		}
-
-		h2{
-			color: $primary-color;
-		}
-
-		.name-last{
-			text-align: start;
-
-			p{
-				font-size: 20px;
-			}
-
-			input{
-				padding-left: 10px;
-				border: solid 2px $primary-color;
-				border-radius: 30px;
-				height: 30px;
-				margin-top: 5px;
-				width: 95%;
-				font-size: 20px;
-			}
-		}
-
-		.creditcard-info{
-			text-align: start;
-			margin-top: 5px;
-
-			p{
-				font-size: 20px;
-			}
-
-
-			input{
-				padding-left: 10px;
-				border: solid 2px $primary-color;
-				border-radius: 30px;
-				height: 30px;
-				margin-top: 5px;
-				width: 95%;
-				font-size: 20px;
-			}
-
-			.expi-ccv{
-				display: flex;
-				gap: 10px;
-					
-				input{
-					width: 44.5%;
-				}
-			}
-
-		}
-
-			.email{
-				margin-top: 5px;
-			}
-
-			.direction{
-				margin-top: 5px;
-			}
-
-		
-
-			.buy-btn{
-
-				text-align: center;
-
-				button{
-					margin-top: 10px;
-					padding: 7px 10px;
-					background-color: $primary-color;
-					color: white;
-					font-size: 15px;
-					border: none;
-					border-radius: 10px;
-					font-size: 20px;
-				}
-	
-				button:hover {
-					color: $primary-color;
-					background-color: white;
-					border: solid 2px $primary-color;
-					transition: 0.3s ease;
-				}
-			}
-
-			.warnings{
-				width: 200px;
-				text-align: center;
-				margin: auto;
-				color: red;
-				padding-top: 20px;
-			}
-
-
-		.colores{
-			margin-bottom: 5px;
-
-			label{
-				font-size: 20px;
-			}
-
-			#colors{
-				border: solid 2px $primary-color;
-				border-radius: 10px;
-				color: $primary-color;
-				font-size: 18px;
-				height: 30px;
-				margin-right: 10px;
-			}
-
-			input{
-				border: solid 2px $primary-color;
-				border-radius: 10px;
-				color: $primary-color;
-				font-size: 18px;
-				height: 30px;
-				text-align: center;
-			}
-		}
-
-		
-}
-
-.container-modal {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.267);
-	display: none;
 	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
 
-.content-modal {
-	max-width: 400px;
-	padding: 20px;
-	background-color: white;
-	border-radius: 4px;
-	h2 {
-		text-align: center;
-		color: $primary-color;
-		padding-bottom: 5px;
-		border-bottom: 1px solid $primary-color;
+	p{
+		margin-bottom: 5px;
+		font-size: 25px;
+		margin-right: 43px;
+		font-weight: 800;
 	}
-	p {
-		font-size: 20px;
-		padding: 5px 0px;
+
+	span img{
+		margin-top: -2px;
 		text-align: center;
 	}
 }
 
-.modal-img {
-	text-align: center;
-	padding-top: 10px;
-	img {
-		height: 150px;
-	}
-}
+form {
 
-.btn-comprar {
-	text-align: center;
-	margin-top: 15px;
-	user-select: none;
-	label {
-		padding: 7px 10px;
-		background-color: $primary-color;
-		color: white;
-		border-radius: 10px;
-		font-size: 20px;
-		&:hover {
+	.name-last {
+		text-align: start;
+
+		p {
+			font-size: 20px;
+		}
+
+		input {
+			padding-left: 10px;
+			border: solid 2px $primary-color;
+			border-radius: 30px;
+			height: 30px;
+			width: 95%;
+			font-size: 20px;
+		}
+	}
+
+	.creditcard-info {
+		text-align: start;
+		margin-top: 5px;
+
+		p {
+			font-size: 20px;
+		}
+
+
+		input {
+			padding-left: 10px;
+			border: solid 2px $primary-color;
+			border-radius: 30px;
+			height: 30px;
+			margin-top: 5px;
+			width: 95%;
+			font-size: 20px;
+		}
+
+		.expi-ccv {
+			display: flex;
+			gap: 10px;
+
+			input {
+				width: 46.5%;
+			}
+		}
+
+	}
+
+	.email {
+		margin-top: 1px;
+	}
+
+	.direction {
+		margin-top: 1px;
+	}
+
+
+
+	.buy-btn {
+
+		text-align: center;
+
+		button {
+			margin-top: 10px;
+			padding: 7px 10px;
+			background-color: $primary-color;
+			color: white;
+			font-size: 15px;
+			border: none;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+
+		button:hover {
 			color: $primary-color;
 			background-color: white;
 			border: solid 2px $primary-color;
 			transition: 0.3s ease;
 		}
 	}
+
+	.Comboboxes {
+		margin-bottom: 5px;
+
+		label {
+			font-size: 20px;
+			margin-right: 10px;
+		}
+
+		input,select {
+			border: solid 2px $primary-color;
+			border-radius: 10px;
+			color: $primary-color;
+			font-size: 18px;
+			height: 30px;
+			text-align: center;
+			width: 10%;
+			margin-right: 10px;
+		}
+	}
+
+
 }
+
+
+
+
+@media (max-width: 1535px) {
+	#Catalogo .Catalogo-section {
+		height: 100%;
+	}
+}
+
+
 /*CATALOGO*/

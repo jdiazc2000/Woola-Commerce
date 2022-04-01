@@ -27,7 +27,7 @@ return (
     <>
         <div>
         {
-             modalsbuy.map(({id,tipo,marca,imagen,color1,color2,color3,stock}) => (
+             modalsbuy.map(({id,tipo,marca,imagen,color1,color2,color3,stock,talla}) => (
                 <ModalsBuy
                        key = {id}
                        id={id}
@@ -38,6 +38,7 @@ return (
                        color2={color2}
                        color3={color3}
                        stock={stock}
+                       talla={talla}
                    />
                ))
              }

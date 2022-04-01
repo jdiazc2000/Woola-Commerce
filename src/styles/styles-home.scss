@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
 
-
 $primary-color: #8F00FF;
 
 *{
@@ -218,6 +217,18 @@ img,svg{
 .modal-content{
 	border: solid 2px $primary-color;
 
+	.close{
+	color: $primary-color;
+	width: 8%;
+	border: solid $primary-color 2px;
+	background-color: white;
+	border-radius: 10px;
+
+	span{
+		font-size: 30px;
+	}
+	}
+
 	.modal-header{
 		border-bottom: solid 2px $primary-color;
 		padding: 0.3rem 1rem;
@@ -228,49 +239,40 @@ img,svg{
 		color: $primary-color;
 		text-shadow: 0px 2px 4px rgba(145,145,145,0.89);
 	}
-}
 
-.close{
-	color: $primary-color;
-	width: 8%;
-	border: solid $primary-color 2px;
-	background-color: white;
-	border-radius: 10px;
-	span{
-		font-size: 30px;
-	}
-}
-
-.modal-body{
-	text-align: center;
-
-	img{
-		width: 130px;
-	}
-}
-
-.modal-footer{
-	margin: 0 auto;
-
-	button{
-		color: $primary-color;
-		font-weight: 900;
-		background-color: white;
-		transition: ease-out 0.5s;
-		border: 2px solid $primary-color;
-		border-radius: 10px;
+	.modal-body{
+		text-align: center;
 	
-		&:hover {
-			color: white;
-			box-shadow: inset 0 -100px 0 0 #931deeab;
+		img{
+			width: 130px;
+		}
+	}
+	
+	.modal-footer{
+		margin: 0 auto;
+	
+		button{
+			color: $primary-color;
+			font-weight: 900;
+			background-color: white;
+			transition: ease-out 0.5s;
 			border: 2px solid $primary-color;
+			border-radius: 10px;
+		
+			&:hover {
+				color: white;
+				box-shadow: inset 0 -100px 0 0 #931deeab;
+				border: 2px solid $primary-color;
+			}
 		}
-		&:active {
-			transform: scale(0.9);
-		}
+	
 	}
 
 }
+
+
+
+
 
 @media (max-width: 447px){
     .content-modal{

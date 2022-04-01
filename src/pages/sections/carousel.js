@@ -1,11 +1,11 @@
 import Portada1 from "../imgs/Carousel-imgs/Portada1.jpg";
 import Portada2 from "../imgs/Carousel-imgs/Portada2.jpg";
 import Portada3 from "../imgs/Carousel-imgs/Portada3.jpg";
-
+import "../../styles/styles-home.scss"
 
 const Carousel = () => {
   return (
-    <div id="carouselExampleControls" className="carousel slide carousel-fade" data-interval="true " data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide  carousel-fade" data-interval="true " data-bs-ride="carousel">
     <div className="carousel-inner">
       <div className="carousel-item active" data-bs-interval="2500">
         <img src={Portada1} className="d-block w-100" alt="..." />

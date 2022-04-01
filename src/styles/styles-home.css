@@ -208,7 +208,7 @@ img, svg {
   border: solid #8F00FF 2px;
 }
 
-.Catalogo-button #Catalogo_Label a {
+.Catalogo-button #Catalogo_Label p {
   color: #8F00FF;
   text-decoration: none;
   font-size: 20px;
@@ -232,6 +232,18 @@ img, svg {
   border: solid 2px #8F00FF;
 }
 
+.modal-content .close {
+  color: #8F00FF;
+  width: 8%;
+  border: solid #8F00FF 2px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.modal-content .close span {
+  font-size: 30px;
+}
+
 .modal-content .modal-header {
   border-bottom: solid 2px #8F00FF;
   padding: 0.3rem 1rem;
@@ -243,31 +255,19 @@ img, svg {
   text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 }
 
-.close {
-  color: #8F00FF;
-  width: 8%;
-  border: solid #8F00FF 2px;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.close span {
-  font-size: 30px;
-}
-
-.modal-body {
+.modal-content .modal-body {
   text-align: center;
 }
 
-.modal-body img {
+.modal-content .modal-body img {
   width: 130px;
 }
 
-.modal-footer {
+.modal-content .modal-footer {
   margin: 0 auto;
 }
 
-.modal-footer button {
+.modal-content .modal-footer button {
   color: #8F00FF;
   font-weight: 900;
   background-color: white;
@@ -277,16 +277,11 @@ img, svg {
   border-radius: 10px;
 }
 
-.modal-footer button:hover {
+.modal-content .modal-footer button:hover {
   color: white;
   -webkit-box-shadow: inset 0 -100px 0 0 #931deeab;
           box-shadow: inset 0 -100px 0 0 #931deeab;
   border: 2px solid #8F00FF;
-}
-
-.modal-footer button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 
 @media (max-width: 447px) {

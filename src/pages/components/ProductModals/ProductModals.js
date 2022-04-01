@@ -1,6 +1,6 @@
 
 
-const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,genero,descripción,precio,stock}) => {
+const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,genero,descripción,precio,stock,talla}) => {
 
     return(
         <>
@@ -8,7 +8,7 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,ge
     <div className="modal-dialog modal-dialog-centered" role="document">
     <div className="modal-content">
       <div className="modal-header">
-        <h1 className="modal-title" id="exampleModalLabel">{tipo} {marca}</h1>
+        <h1 className="modal-title" id={`exampleModalLabel${id}`}>{tipo} {marca}</h1>
         <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -16,6 +16,7 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,ge
       <div className="modal-body">
           <img src={imagen} alt="product-img"/>
           <h2>Género: <span><b>{genero}</b></span></h2>
+          <p>Talla: {talla}</p>
           <p>Colores: {color1} {color2} {color3}</p>
           <p><span><b>{descripción}</b></span></p>
           <p>Precio: <span><b>{preciooferta ?  `$${preciooferta}` : `$${precio}`}</b></span></p>

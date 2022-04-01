@@ -1,5 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
 html {
   min-height: 100%;
   position: relative;
@@ -12,7 +10,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
 /*CATALOGO*/
@@ -22,6 +20,7 @@ html {
   margin-top: 75px;
   padding-bottom: 10px;
 }
+
 #Catalogo .title {
   padding: 5px;
   text-align: center;
@@ -29,11 +28,13 @@ html {
   font-size: 30px;
   text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 }
+
 #Catalogo .input {
   outline: none !important;
   text-align: center;
   height: 80px;
 }
+
 #Catalogo .input input {
   margin-top: 13px;
   width: 60%;
@@ -44,15 +45,25 @@ html {
   padding-left: 10px;
   color: grey;
 }
+
 #Catalogo .Catalogo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 330px;
   width: 70%;
   margin: 0 auto;
 }
+
 #Catalogo .Catalogo-section .loader {
   --clr: #8F00FF;
   /* color of spining  */
@@ -60,7 +71,9 @@ html {
   height: 150px;
   position: relative;
 }
-#Catalogo .Catalogo-section .loader:before, #Catalogo .Catalogo-section .loader:after {
+
+#Catalogo .Catalogo-section .loader:before,
+#Catalogo .Catalogo-section .loader:after {
   content: "";
   position: absolute;
   top: 0;
@@ -71,30 +84,39 @@ html {
   border: 10px solid transparent;
   border-top-color: var(--clr);
 }
+
 #Catalogo .Catalogo-section .loader:before {
   z-index: 1;
   -webkit-animation: spin 1s infinite;
           animation: spin 1s infinite;
 }
+
 #Catalogo .Catalogo-section .loader:after {
   border: 10px solid #ccc;
 }
+
 @-webkit-keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
+
 #Catalogo .Catalogo-section .sale {
   width: 250px;
   height: 370px;
@@ -102,19 +124,17 @@ html {
   margin: 0 auto;
   background: white;
   border-radius: 0.4em;
-  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  -webkit-box-shadow: 0.3em 0.3em 0.7em #00000015;
+          box-shadow: 0.3em 0.3em 0.7em #00000015;
   border: #fafafa 0.2em solid;
 }
+
 #Catalogo .Catalogo-section .sale:hover {
   border: #8F00FF 0.2em solid;
+  -webkit-transition: border 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: border 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (max-width: 1535px) {
-  #Catalogo .Catalogo-section {
-    height: 100%;
-  }
-}
 .filtro {
   display: none;
 }
@@ -122,6 +142,7 @@ html {
 .Catalogo-section .sale-item {
   padding: 5px 5px;
 }
+
 .Catalogo-section .sale-item .sale img {
   width: 70%;
   margin-top: 15px;
@@ -130,50 +151,61 @@ html {
 .sale .info h2 {
   color: #8F00FF;
 }
+
 .sale .info p {
   font-size: 20px;
   font-weight: bold;
 }
 
-.eins-modal-content {
-  border: solid #8F00FF 2px;
-}
-
-.eins-modal-close {
-  color: #8F00FF;
-}
-
-.buy-modal {
-  border: solid 2px #8F00FF;
-  text-align: center;
-  height: 100%;
-  display: flex;
-}
-.buy-modal .buy-title {
-  border-bottom: solid 2px #8F00FF;
+.buy-title-form {
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.buy-modal .buy-title p {
+
+.buy-title-form p {
   margin-bottom: 5px;
   font-size: 25px;
   margin-right: 43px;
+  font-weight: 800;
 }
-.buy-modal .buy-title span img {
+
+.buy-title-form span img {
   margin-top: -2px;
   text-align: center;
 }
-.buy-modal h2 {
-  color: #8F00FF;
-}
-.buy-modal .name-last {
+
+form .name-last {
   text-align: start;
 }
-.buy-modal .name-last p {
+
+form .name-last p {
   font-size: 20px;
 }
-.buy-modal .name-last input {
+
+form .name-last input {
+  padding-left: 10px;
+  border: solid 2px #8F00FF;
+  border-radius: 30px;
+  height: 30px;
+  width: 95%;
+  font-size: 20px;
+}
+
+form .creditcard-info {
+  text-align: start;
+  margin-top: 5px;
+}
+
+form .creditcard-info p {
+  font-size: 20px;
+}
+
+form .creditcard-info input {
   padding-left: 10px;
   border: solid 2px #8F00FF;
   border-radius: 30px;
@@ -182,39 +214,31 @@ html {
   width: 95%;
   font-size: 20px;
 }
-.buy-modal .creditcard-info {
-  text-align: start;
-  margin-top: 5px;
-}
-.buy-modal .creditcard-info p {
-  font-size: 20px;
-}
-.buy-modal .creditcard-info input {
-  padding-left: 10px;
-  border: solid 2px #8F00FF;
-  border-radius: 30px;
-  height: 30px;
-  margin-top: 5px;
-  width: 95%;
-  font-size: 20px;
-}
-.buy-modal .creditcard-info .expi-ccv {
+
+form .creditcard-info .expi-ccv {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.buy-modal .creditcard-info .expi-ccv input {
-  width: 44.5%;
+
+form .creditcard-info .expi-ccv input {
+  width: 46.5%;
 }
-.buy-modal .email {
-  margin-top: 5px;
+
+form .email {
+  margin-top: 1px;
 }
-.buy-modal .direction {
-  margin-top: 5px;
+
+form .direction {
+  margin-top: 1px;
 }
-.buy-modal .buy-btn {
+
+form .buy-btn {
   text-align: center;
 }
-.buy-modal .buy-btn button {
+
+form .buy-btn button {
   margin-top: 10px;
   padding: 7px 10px;
   background-color: #8F00FF;
@@ -224,101 +248,40 @@ html {
   border-radius: 10px;
   font-size: 20px;
 }
-.buy-modal .buy-btn button:hover {
+
+form .buy-btn button:hover {
   color: #8F00FF;
   background-color: white;
   border: solid 2px #8F00FF;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.buy-modal .warnings {
-  width: 200px;
-  text-align: center;
-  margin: auto;
-  color: red;
-  padding-top: 20px;
-}
-.buy-modal .colores {
+
+form .Comboboxes {
   margin-bottom: 5px;
 }
-.buy-modal .colores label {
+
+form .Comboboxes label {
   font-size: 20px;
-}
-.buy-modal .colores #colors {
-  border: solid 2px #8F00FF;
-  border-radius: 10px;
-  color: #8F00FF;
-  font-size: 18px;
-  height: 30px;
   margin-right: 10px;
 }
-.buy-modal .colores input {
+
+form .Comboboxes input, form .Comboboxes select {
   border: solid 2px #8F00FF;
   border-radius: 10px;
   color: #8F00FF;
   font-size: 18px;
   height: 30px;
   text-align: center;
+  width: 10%;
+  margin-right: 10px;
 }
 
-.container-modal {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.267);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+@media (max-width: 1535px) {
+  #Catalogo .Catalogo-section {
+    height: 100%;
+  }
 }
 
-.content-modal {
-  max-width: 400px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 4px;
-}
-.content-modal h2 {
-  text-align: center;
-  color: #8F00FF;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #8F00FF;
-}
-.content-modal p {
-  font-size: 20px;
-  padding: 5px 0px;
-  text-align: center;
-}
-
-.modal-img {
-  text-align: center;
-  padding-top: 10px;
-}
-.modal-img img {
-  height: 150px;
-}
-
-.btn-comprar {
-  text-align: center;
-  margin-top: 15px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.btn-comprar label {
-  padding: 7px 10px;
-  background-color: #8F00FF;
-  color: white;
-  border-radius: 10px;
-  font-size: 20px;
-}
-.btn-comprar label:hover {
-  color: #8F00FF;
-  background-color: white;
-  border: solid 2px #8F00FF;
-  transition: 0.3s ease;
-}
-
-/*CATALOGO*//*# sourceMappingURL=styles-catalogo.css.map */
+/*CATALOGO*/
+/*# sourceMappingURL=styles-catalogo.css.map */
