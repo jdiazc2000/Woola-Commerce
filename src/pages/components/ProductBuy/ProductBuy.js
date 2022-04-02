@@ -1,21 +1,32 @@
 import "../../../styles/styles-catalogo.scss"
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import Swal from "sweetalert2"
 
 const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, talla }) => {
 
+
   const { register, formState: { errors }, reset, handleSubmit } = useForm();
+
+  const [buttontextonbuy, setButtontextonbuy] = useState(false)
+
+
   const onSubmit = (data) => {
-    console.table(data);
-    reset();
-    Swal.fire
-    ( 
-      'Compra realizada',
-      'Pronto nos comunicaremos contigo :)',
-      'success'
-    )
+    console.table(data); 
+    setButtontextonbuy(true);
+    const buytimer = setTimeout (() => {
+      Swal.fire
+      ( 
+        'Compra realizada',
+        'Pronto nos comunicaremos contigo :)',
+        'success'
+      )
+      setButtontextonbuy(false);
+      reset();
+    },2000);
+    return () => clearTimeout(buytimer);
   }
+
 
   const BackBuyModal = () =>{
     reset();
@@ -113,23 +124,33 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, ta
 
                     <div className="expi-ccv">
 
-                      <input 
-                      type="text" 
-                      name="creditcard_expdate"
-                      placeholder="MM/YY" 
-                      {...register('creditcard_expdate', { required: true, pattern: /^(0[1-9]|1[0-2])\/?([0-9]{2})$/ })} />
-                      {errors.creditcard_expdate?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
-                      {errors.creditcard_expdate?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese una fecha de expiración válida</span>}
+                    <div>
+                        <input 
+                        type="text" 
+                        name="creditcard_expdate"
+                        placeholder="MM/YY" 
+                        {...register('creditcard_expdate', { required: true, pattern: /^(0[1-9]|1[0-2])\/?([0-9]{2})$/ })} />
+
+                      <div>
+                        {errors.creditcard_expdate?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                        {errors.creditcard_expdate?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese una fecha de expiración válida</span>}
+                      </div>
+                    </div>
 
 
+                    <div>
                       <input
                        type="text"
                        name="creditcard_ccv"
                        placeholder="CCV"
-                      {...register('creditcard_ccv', { required: true, pattern: /^[0-9]{3,4}$/ })} />
+                       {...register('creditcard_ccv', { required: true, pattern: /^[0-9]{3,4}$/ })} />
+                        
+                      <div>
                       {errors.creditcard_ccv?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
                       {errors.creditcard_ccv?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese un CCV válido</span>}
-
+                      </div>
+                    </div>
+         
                     </div>
 
                     <div className="email">
@@ -156,7 +177,9 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, ta
 
 
                   <div className="modal-footer" style={{ justifyContent: "center" }}>
-                    <button className="btn btn-secondary mr-auto">Procesar Compra</button>
+                    {
+                      buttontextonbuy ? <button className="btn btn-secondary mr-auto">Procesando compra...</button> : <button className="btn btn-secondary mr-auto" >Procesar Compra</button> 
+                    }
                     <label className="btn btn-secondary mr-auto volver-btn" data-bs-dismiss="modal" onClick={BackBuyModal} >Volver</label>
                   </div>
 
@@ -171,7 +194,5 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, ta
   )
 
 }
-
-
 
 export default ProductBuy

@@ -135,7 +135,7 @@ form .name-last p {
 form .name-last input {
   padding-left: 10px;
   border: solid 2px #8F00FF;
-  border-radius: 30px;
+  border-radius: 5px;
   height: 30px;
   width: 95%;
   font-size: 20px;
@@ -153,7 +153,7 @@ form .creditcard-info p {
 form .creditcard-info input {
   padding-left: 10px;
   border: solid 2px #8F00FF;
-  border-radius: 30px;
+  border-radius: 5px;
   height: 30px;
   margin-top: 5px;
   width: 95%;
@@ -165,10 +165,12 @@ form .creditcard-info .expi-ccv {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  text-align: start;
 }
 
 form .creditcard-info .expi-ccv input {
   width: 46.5%;
+  min-width: 100px;
 }
 
 form .email {
@@ -231,7 +233,7 @@ form .Comboboxes label {
 
 form .Comboboxes input, form .Comboboxes select {
   border: solid 2px #8F00FF;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #8F00FF;
   font-size: 18px;
   height: 30px;

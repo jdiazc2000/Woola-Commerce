@@ -14,9 +14,13 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,ge
         </button>
       </div>
       <div className="modal-body">
+          
           <img src={imagen} alt="product-img"/>
-          <h2>Género: <span><b>{genero}</b></span></h2>
-          <p>Talla: {talla}</p>
+
+
+
+          <p>Género: <span><b>{genero}</b></span></p>
+          <p>Talla: <b>{talla}</b></p>
           <p>Colores: {color1} {color2} {color3}</p>
           <p><span><b>{descripción}</b></span></p>
           <p>Precio: <span><b>{preciooferta ?  `$${preciooferta}` : `$${precio}`}</b></span></p>

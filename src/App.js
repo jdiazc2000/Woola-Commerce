@@ -30,15 +30,15 @@ const App = () => (
           <ul className="nav-menu">
 
               <li className="nav-menu-item"><NavLink to="/" onClick={CloseMenu} exact="true"  className="nav-link" 
-              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', transition: '0.5s ease-in-out'} : {color: 'black'})}
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', borderBottom: '3px solid'} : {color: 'black'})}
               >Inicio</NavLink></li>
 
               <li className="nav-menu-item"><NavLink to="/aboutus" onClick={CloseMenu} exact="true"  className="nav-link"
-              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', transition: '0.5s ease-in-out'} : {color: 'black'})}
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', borderBottom: '3px solid'} : {color: 'black'})}
               >Sobre nosotros</NavLink></li>
 
               <li className="nav-menu-item"><NavLink to="/catalogo" onClick={CloseMenu} exact="true"  className="nav-link"
-              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', transition: '0.5s ease-in-out'} : {color: 'black'})}
+              style={({ isActive }) => (isActive ? {color: '#8F00FF', fontWeight: 'bold' , backgroundColor: '#F0F0F0', borderBottom: '3px solid'} : {color: 'black'})}
               >Catálogo</NavLink></li>
 
           </ul>
