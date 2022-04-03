@@ -1,13 +1,7 @@
 
 import { motion } from "framer-motion"
 
-import { defineLordIconElement } from "lord-icon-element";
-import lottie from "lottie-web";
-
-
 const AboutSquares  = ({img,descrip}) => {
-
-    defineLordIconElement(lottie.loadAnimation);
 
     return(
         <>
