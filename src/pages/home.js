@@ -19,9 +19,9 @@ const Home = () => {
     return (
     <>
 <div>          
-    <div id="Carousel">
-        <Carousel/>
-    </div>  
+
+
+            <Carousel/>
      
     <div id="Ofertas">
 
@@ -41,7 +41,6 @@ const Home = () => {
 
             <Modals/>
             <BuyModals/>   
-
     </div>
     
             <Footer/>

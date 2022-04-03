@@ -33,29 +33,33 @@ img,svg{
 	vertical-align: sub;
 }
 
+
 #Carousel{
 	margin-top: 75px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	.carousel-fade {
-		.carousel-item{
-		  opacity: 0;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  display: flex;
-		  position: absolute;
-		  transition: opacity .30s ease-in-out;
-		  max-height: 800px;
 
-		  &:first-of-type {
-			position:relative;
-		  }           
-			  &.active {
-				  opacity: 1;
-			  }
-		}
-	  } 
-	
+	.Text{
+
+		height: 700px;
+		width: 50%;
+		display: grid;
+		place-content: center;
+		text-align: center;
+	}
+
+		
+	.Images{
+
+		height: 700px;
+		width: 50%;
+		display: grid;
+		place-content: center;
+	}
+
 }
 
 /* Ofertas */
@@ -263,15 +267,6 @@ img,svg{
 }
 
 
-
-
-
-@media (max-width: 447px){
-    .content-modal{
-        width: 90%;
-        max-width: 80%;
-    }
-}
 
 @media (max-width: 1145px){
     #Ofertas .Ofertas-section{
