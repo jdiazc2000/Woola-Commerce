@@ -24,9 +24,9 @@ const Footer = () => {
 <div className="footer-left">
 
     <p className="footer-links">
-        <a className="link-1" href="#/">Inicio</a> -
+        <a href="#/" onClick={scrollToTop}>Inicio</a> -
 
-        <a href="#/aboutus" >Sobre nosotros</a> -
+        <a href="#/aboutus" onClick={scrollToTop}>Sobre nosotros</a> -
 
         <a href="#/catalogo" onClick={scrollToTop}>Catálogo</a>
 
