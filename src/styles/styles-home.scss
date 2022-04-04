@@ -40,24 +40,37 @@ img,svg{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	background-image: url("../pages/imgs/fondo.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	.Text{
-
+		color: white;
 		height: 700px;
 		width: 50%;
 		display: grid;
 		place-content: center;
 		text-align: center;
+		background-color: rgba(0, 0, 0, 0.409);
+
+		h2{
+			margin-left: 30px;
+			margin-right: 30px;
+		}
 	}
 
+	@media (max-width: 536px){
+		h2{
+			font-size: 30px;
+		}
+	}
 		
 	.Images{
-
 		height: 700px;
 		width: 50%;
 		display: grid;
 		place-content: center;
+		background-color: rgba(0, 0, 0, 0.409);
 	}
 
 }
@@ -238,12 +251,24 @@ img,svg{
 
 	.modal-body{
 		text-align: center;
-	
-		img{
-			width: 130px;
+
+		.carousel .thumb img{
+			width: 70px;
+			height: 75px;
 		}
+	
+		.carousel .slider-wrapper{
+			width: 250px;
+			height: 275px;
+		}
+		
+
 	}
 	
+
+
+
+
 	.modal-footer{
 		margin: 0 auto;
 	

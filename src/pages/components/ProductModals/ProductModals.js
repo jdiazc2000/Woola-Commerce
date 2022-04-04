@@ -1,6 +1,9 @@
 
 
-const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,genero,descripción,precio,stock,talla}) => {
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+const ProductModals= ({id,tipo,marca,imagen,preciooferta,genero,colores,descripción,precio,stock,talla}) => {
 
     return(
         <>
@@ -15,13 +18,23 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,color1,color2,color3,ge
       </div>
       <div className="modal-body">
           
-          <img src={imagen} alt="product-img"/>
+      <Carousel showStatus={false} showArrows={false} showIndicators={false}>
+                <div>
+                    <img src={imagen.img1} alt={`ProductImg1_${id}`} />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src={imagen.img2}  alt={`ProductImg2_${id}`} />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src={imagen.img3} alt={`ProductImg3_${id}`} />
+                </div>
+      </Carousel>
 
-
-
+          <p>Colores: <b>{colores.color1},{colores.color2},{colores.color3}</b></p> 
           <p>Género: <span><b>{genero}</b></span></p>
           <p>Talla: <b>{talla}</b></p>
-          <p>Colores: {color1} {color2} {color3}</p>
           <p><span><b>{descripción}</b></span></p>
           <p>Precio: <span><b>{preciooferta ?  `$${preciooferta}` : `$${precio}`}</b></span></p>
           <p>Stock: <span><b>{stock}</b></span></p>

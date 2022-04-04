@@ -1,5 +1,6 @@
 import "../../styles/styles-footer.scss"
 
+
 const Footer = () => {
 
     const scrollToTop = () =>{
@@ -10,6 +11,8 @@ const Footer = () => {
       };
 
     return (
+<>
+
 <footer className="footer-distributed">
 
 <div className="footer-right">
@@ -26,7 +29,7 @@ const Footer = () => {
     <p className="footer-links">
         <a href="#/" onClick={scrollToTop}>Inicio</a> -
 
-        <a href="#/aboutus" onClick={scrollToTop}>Sobre nosotros</a> -
+        <a href="#/aboutus" onClick={scrollToTop} >Sobre nosotros</a> -
 
         <a href="#/catalogo" onClick={scrollToTop}>Catálogo</a>
 
@@ -36,6 +39,7 @@ const Footer = () => {
 </div>
 
 </footer>
+</>
 )
 
 }

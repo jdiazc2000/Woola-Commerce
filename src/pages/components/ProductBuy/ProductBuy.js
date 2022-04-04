@@ -3,8 +3,7 @@ import { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import Swal from "sweetalert2"
 
-const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, talla }) => {
-
+const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
 
   const { register, formState: { errors }, reset, handleSubmit } = useForm();
 
@@ -57,7 +56,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, ta
               </div>
 
               <div className="modal-img">
-                <img src={imagen} alt="product-img" />
+                <img src={imagen.img1} alt="product-img" />
               </div>
 
               <Fragment>
@@ -69,15 +68,15 @@ const ProductBuy = ({ id, tipo, marca, imagen, color1, color2, color3, stock, ta
 
                   <div className="Comboboxes">
                     <div className="Color_div">
-                      <label htmlFor="colors">Color:</label>
+                      <label htmlFor="colores">Color:</label>
                       <select 
-                      name="colors" 
+                      name="colores" 
                       className="select-color" 
                       title="color-form" 
-                      {...register('colors')}>
-                        <option defaultValue={color1}>{color1}</option>
-                        <option value={color2}>{color2}</option>
-                        <option value={color3}>{color3}</option>
+                      {...register('colores')}>
+                        <option defaultValue={colores.color1}>{colores.color1}</option>
+                        <option value={colores.color2}>{colores.color2}</option>
+                        <option value={colores.color3}>{colores.color3}</option>
                       </select>
                     </div>
 

@@ -36,7 +36,7 @@ const Sales = ({uripath}) => {
                         id={id}
                         tipo={tipo}
                         marca={marca}
-                        imagen={imagen}
+                        imagen={imagen.img1}
                         precio={precio}
                         stock={stock}
                         preciooferta={preciooferta}
