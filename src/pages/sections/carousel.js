@@ -8,7 +8,7 @@ const Carousel = () => {
     <div id="Carousel">
 
       <div className="Text">
-            <h2 className="animate__animated animate__backInLeft">Haz tus compras online en Ripley y 
+            <h2 className="animate__animated animate__backInLeft">Haz tus compras online en Woola Commerce y 
             encuentra las mejores ofertas en tecnología, muebles, moda, electrohogar, telefonía y deportes.</h2>
       </div>
 
