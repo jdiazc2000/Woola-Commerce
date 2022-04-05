@@ -1,3 +1,4 @@
+
 const Product= ({id,tipo,marca,imagen,stock,precio,preciooferta}) => {
 
     return(

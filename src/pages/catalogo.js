@@ -2,9 +2,9 @@
 import "../styles/styles-catalogo.scss"
 import "../styles/styles-nosotros.scss"
 
-import Sales from "./sections/sales"
 import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
+import CatalogoProducts from "./sections/Catalogo_Products"
 import Footer from "./sections/footer"
 import { motion } from "framer-motion"
 
@@ -26,7 +26,7 @@ const Catalogo = () => {
     })
  
     
-    
+
 return (
     <>
 <div id="Catalogo">
@@ -43,9 +43,9 @@ return (
 
         <div className="Catalogo-section listaArticulos">
 
-                     <Sales uripath={"catalogo"}/>
-                    <Modals/>
-                     <BuyModals/>
+            <CatalogoProducts/>         
+            <Modals/>
+            <BuyModals/>
 
          </div>
     </div>

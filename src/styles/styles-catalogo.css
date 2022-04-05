@@ -119,9 +119,8 @@ html {
   font-weight: 800;
 }
 
-.buy-title-form span img {
-  margin-top: -2px;
-  text-align: center;
+.modal-img img {
+  width: 60%;
 }
 
 form .name-last {

@@ -4,37 +4,47 @@
 
 $primary-color: #8F00FF;
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 	font-family: 'Play', sans-serif;
 	font-weight: 900;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 900;
 }
 
-a{
+a {
 	font-weight: 500;
 }
 
-p{
+p {
 	margin-bottom: 0px;
 	font-weight: 100;
 }
 
-button,input,optgroup,select,textarea{
+button,
+input,
+optgroup,
+select,
+textarea {
 	line-height: normal;
 }
 
-img,svg{
+img,
+svg {
 	vertical-align: sub;
 }
 
 
-#Carousel{
+#Carousel {
 	margin-top: 75px;
 	width: 100%;
 	display: flex;
@@ -44,7 +54,7 @@ img,svg{
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	.Text{
+	.Text {
 		color: white;
 		height: 700px;
 		width: 50%;
@@ -53,19 +63,19 @@ img,svg{
 		text-align: center;
 		background-color: rgba(0, 0, 0, 0.409);
 
-		h2{
+		h2 {
 			margin-left: 30px;
 			margin-right: 30px;
 		}
 	}
 
-	@media (max-width: 536px){
-		h2{
+	@media (max-width: 536px) {
+		h2 {
 			font-size: 30px;
 		}
 	}
-		
-	.Images{
+
+	.Images {
 		height: 700px;
 		width: 50%;
 		display: grid;
@@ -81,39 +91,57 @@ img,svg{
 	align-items: center;
 	background-color: #F0F0F0;
 	padding-bottom: 30px;
-    	
-    .title {
+
+	.title {
 		text-align: center;
-		h2{
+
+		h2 {
 			text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 			color: $primary-color;
 			font-size: 40px;
 			padding: 10px;
 		}
 	}
-    
-	.Ofertas-section {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: 30px;
-    }
 
- 
-		.sale {
-			width: 250px;
-			height: 370px;
-			text-align: center;
-			margin: 0 auto;
-			background: rgb(255, 255, 255);
-			border-radius: 0.4em;
-			box-shadow: 0.3em 0.3em 0.7em #00000015;
-			border: rgb(250, 250, 250) 0.2em solid;
-		}
+	/* square buttons */
+	.rec.rec-arrow {
+		border-radius: 50%;
+		margin: 0 15px
+	}
 
-		.sale:hover {
-			border: $primary-color 0.2em solid;
-			transition: border 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		}
+	/* round buttons on hover */
+	.rec.rec-arrow:hover {
+		border-radius: 50%;
+	}
+
+	/* hide disabled buttons */
+	.rec.rec-arrow:disabled {
+		visibility: hidden;
+	}
+
+	/* disable default outline on focused items */
+	/* add custom outline on focused items */
+	.rec-carousel-item:focus {
+		outline: none;
+		box-shadow: inset 0 0 1px 1px lightgrey;
+	}
+
+
+	.sale {
+		width: 250px;
+		height: 370px;
+		text-align: center;
+		margin: 0 auto;
+		background: rgb(255, 255, 255);
+		border-radius: 0.4em;
+		box-shadow: 0.3em 0.3em 0.7em #00000015;
+		border: rgb(250, 250, 250) 0.2em solid;
+	}
+
+	.sale:hover {
+		border: $primary-color 0.2em solid;
+		transition: border 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
 }
 
 
@@ -127,11 +155,13 @@ img,svg{
 		border: solid 2px $primary-color;
 		border-radius: 10px;
 	}
+
 	.info {
 		h2 {
 			color: $primary-color;
 			font-size: 30px;
 		}
+
 		h4 {
 			font-size: 20px;
 			font-weight: bold;
@@ -139,19 +169,20 @@ img,svg{
 		}
 
 
-		.oferta{
+		.oferta {
 			color: black;
 			font-size: 15px;
 		}
 
-		.PrecioNormal{
+		.PrecioNormal {
 			font-size: 20px;
-   		 	font-weight: bold;
-    		color: black;
+			font-weight: bold;
+			color: black;
 		}
 
-		
+
 	}
+
 	label {
 		position: relative;
 		display: inline-block;
@@ -170,10 +201,12 @@ img,svg{
 		border-radius: 10px;
 		box-shadow: inset 0 0 0 0 #931deeab;
 		user-select: none;
+
 		&:hover {
 			color: white;
 			box-shadow: inset 0 -100px 0 0 #931deeab;
 		}
+
 		&:active {
 			transform: scale(0.9);
 		}
@@ -181,11 +214,11 @@ img,svg{
 }
 
 
-.Catalogo-button{
+.Catalogo-button {
 	padding-top: 30px;
 	text-align: center;
 
-	#Catalogo_Label{
+	#Catalogo_Label {
 		padding: 1.3em 3em;
 		font-size: 12px;
 		text-transform: uppercase;
@@ -200,118 +233,116 @@ img,svg{
 		cursor: pointer;
 		outline: none;
 		border: solid $primary-color 2px;
-	   }
+	}
 
-	   #Catalogo_Label p{
-		 color: $primary-color;
-		 text-decoration: none;
-		 font-size: 20px;
-	     font-weight: 800;
-	   }
-	   
-	   #Catalogo_Label:hover {
+	#Catalogo_Label p {
+		color: $primary-color;
+		text-decoration: none;
+		font-size: 20px;
+		font-weight: 800;
+	}
+
+	#Catalogo_Label:hover {
 		box-shadow: 0px 5px 5px $primary-color;
 		color: #fff;
 		transform: translateY(-5px);
-	   }
-
-	   #Catalogo_Label:active {
-		transform: translateY(-5px);
-	   }
 	}
 
+	#Catalogo_Label:active {
+		transform: translateY(-5px);
+	}
+}
 
 
 
-.modal-content{
+
+.modal-content {
 	border: solid 2px $primary-color;
 
-	.close{
-	color: $primary-color;
-	width: 8%;
-	border: solid $primary-color 2px;
-	background-color: white;
-	border-radius: 10px;
+	.close {
+		color: $primary-color;
+		width: 8%;
+		border: solid $primary-color 2px;
+		background-color: white;
+		border-radius: 10px;
 
-	span{
-		font-size: 30px;
-	}
+		span {
+			font-size: 30px;
+		}
 	}
 
-	.modal-header{
+	.modal-header {
 		border-bottom: solid 2px $primary-color;
 		padding: 0.3rem 1rem;
 	}
 
-	.modal-title{
+	.modal-title {
 		margin: 0 auto;
 		color: $primary-color;
-		text-shadow: 0px 2px 4px rgba(145,145,145,0.89);
+		text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 	}
 
-	.modal-body{
+	.modal-body {
 		text-align: center;
 
-		.carousel .thumb img{
+		.carousel .thumb img {
 			width: 70px;
 			height: 75px;
 		}
-	
-		.carousel .slider-wrapper{
+
+		.carousel .slider-wrapper {
 			width: 250px;
 			height: 275px;
 		}
-		
+
 
 	}
-	
 
 
 
 
-	.modal-footer{
+
+	.modal-footer {
 		margin: 0 auto;
-	
-		button{
+
+		button {
 			color: $primary-color;
 			font-weight: 900;
 			background-color: white;
 			transition: ease-out 0.5s;
 			border: 2px solid $primary-color;
 			border-radius: 10px;
-		
+
 			&:hover {
 				color: white;
 				box-shadow: inset 0 -100px 0 0 #931deeab;
 				border: 2px solid $primary-color;
 			}
 		}
-	
+
 	}
 
 }
 
 
 
-@media (max-width: 1145px){
-    #Ofertas .Ofertas-section{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+@media (max-width: 1145px) {
+	#Ofertas .Ofertas-section {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
-@media (max-width: 874px){
-    #Ofertas .Ofertas-section{
-        grid-template-columns: 1fr 1fr;
+@media (max-width: 874px) {
+	#Ofertas .Ofertas-section {
+		grid-template-columns: 1fr 1fr;
 
-    }
+	}
 }
 
-@media (max-width: 570px){
-    #Ofertas .Ofertas-section{
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 570px) {
+	#Ofertas .Ofertas-section {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Ofertas */
-
-
