@@ -50,7 +50,6 @@ svg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url("../pages/imgs/fondo.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -61,11 +60,11 @@ svg {
 		display: grid;
 		place-content: center;
 		text-align: center;
-		background-color: rgba(0, 0, 0, 0.409);
 
 		h2 {
 			margin-left: 30px;
 			margin-right: 30px;
+			color:#000;
 		}
 	}
 
@@ -80,7 +79,6 @@ svg {
 		width: 50%;
 		display: grid;
 		place-content: center;
-		background-color: rgba(0, 0, 0, 0.409);
 	}
 
 }
