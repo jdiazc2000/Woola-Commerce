@@ -6,16 +6,12 @@ const Carousel = () => {
 
   return (
     <div id="Carousel">
-
-      
+ 
       <div className="Text">
             <motion.div initial={{x:-50}} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100}}>
                 <h2>Haz tus compras online en Woola Commerce y 
                 encuentra las mejores ofertas en tecnología, muebles, moda, electrohogar, telefonía y deportes.</h2>
             </motion.div>
-      </div>
-      <div className="Images">
-            <img alt="Carousel" src=""/>
       </div>
 
     </div>

@@ -123,6 +123,49 @@ html {
   width: 60%;
 }
 
+form .Radio_colors .Color_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+form .Radio_colors .Color_div .input-hidden {
+  display: none;
+}
+
+form .Radio_colors .Color_div input[type=radio]:checked + label > img {
+  border: 3px solid black;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+form .Radio_colors .Color_div img {
+  width: 100px;
+  height: 100px;
+}
+
+form .ComboBoxes {
+  margin-top: 15px;
+}
+
+form .ComboBoxes label {
+  padding-right: 5px;
+}
+
+form .ComboBoxes select, form .ComboBoxes input {
+  border: 2px solid #8f00ff;
+  border-radius: 5px;
+  color: #8f00ff;
+  font-size: 18px;
+  height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  width: 70px;
+}
+
 form .name-last {
   text-align: start;
 }
@@ -219,26 +262,6 @@ form .modal-footer label:hover {
   border: solid 2px #8F00FF;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-
-form .Comboboxes {
-  margin-bottom: 5px;
-}
-
-form .Comboboxes label {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-form .Comboboxes input, form .Comboboxes select {
-  border: solid 2px #8F00FF;
-  border-radius: 5px;
-  color: #8F00FF;
-  font-size: 18px;
-  height: 30px;
-  text-align: center;
-  width: 70px;
-  margin-right: 10px;
 }
 
 @media (max-width: 1535px) {

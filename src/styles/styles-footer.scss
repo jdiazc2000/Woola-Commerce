@@ -70,7 +70,10 @@ $button-bacground: #8F00FF;
 	transition:all .25s;
   }
   
-  .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  .footer-distributed .footer-right a:hover{
+	-webkit-transform:scale(1.1);
+	  transform:scale(1.1); 
+}
   
   .footer-distributed p.footer-links a:hover{text-decoration:underline;}
   
