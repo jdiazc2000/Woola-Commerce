@@ -41,26 +41,49 @@ svg {
 #Carousel {
   margin-top: 75px;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: start;
   background-color: #202020;
 }
 
 #Carousel .Text {
   height: 700px;
-  width: 50%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   place-content: center;
-  text-align: center;
+  text-align: end;
 }
 
 #Carousel .Text h2 {
   margin-left: 30px;
   margin-right: 30px;
+  border: solid blue 2px;
+  width: 50%;
   color: white;
+}
+
+#Carousel .Text p {
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+#Carousel .Text button {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  background-color: #8F00FF;
+  color: white;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+#Carousel .Text button:hover, #Carousel .Text button:focus {
+  color: #8F00FF;
+  border: solid 2px #8F00FF;
+  background-color: white;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 
 @media (max-width: 536px) {

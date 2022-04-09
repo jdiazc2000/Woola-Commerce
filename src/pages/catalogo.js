@@ -26,31 +26,39 @@ const Catalogo = () => {
     })
  
     
-
 return (
     <>
 <div id="Catalogo">
+
+        {/*Catalogo-title */}
         <div className="title">
         <motion.div initial={{x:-40}} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100}}>
             <h2>Cátalogo</h2>
         </motion.div>
         </div>
 
+
+        {/*Buscador */}
         <div className="input">
             <input type="text" name="buscador" id="buscador" placeholder="Búsqueda.."/>
         </div>
 
 
+        {/*Productos */}
         <div className="Catalogo-section listaArticulos">
+        
+        {/*Product card */}
+            <CatalogoProducts/>     
 
-            <CatalogoProducts/>         
+        
+        {/*Products  modals - modal-buy*/}        
             <Modals/>
             <BuyModals/>
 
          </div>
     </div>
 
-
+     {/*Footer */}
     <Footer/>
     
     </>

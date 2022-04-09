@@ -1,7 +1,8 @@
 
-import SqueletonsProducts from "../ProductCard-Squeleton/CardSqueleton"
+import SqueletonsProducts from "../components/ProductCard-Squeleton/CardSqueleton"
 import CarouselSales from 'react-elastic-carousel'
 import { useEffect,useState } from "react"
+import ProductCard from "../components/ProductCard/ProductCard"
 
 const Sales_Carousel = ({uripath}) => {
     const [products,setProducts] = useState()
@@ -37,18 +38,19 @@ const Sales_Carousel = ({uripath}) => {
   
         (
           products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
-            <div className="sale" key={id}>
-                <img src={imagen.img1} alt="prenda"/>
-                <div className="info">
-                    <h2>{tipo} {marca}</h2>
-                    <h4>{preciooferta ?  `$${preciooferta}` : ''}  <span className="oferta"> {preciooferta ?  `$${precio}` : <p className="PrecioNormal">${precio}</p>}</span></h4>
-                </div>
-        {stock === 0 ? <h3 style={{paddingTop: "10px"}}>Sin stock</h3>  : <label htmlFor="btn-modal" data-bs-toggle="modal" data-bs-target={`#exampleModa${id}`}>Comprar</label> }
-            </div>
-
+            <ProductCard key={id}
+            id={id}
+            tipo={tipo}
+            marca={marca}
+            imagen={imagen.img1}
+            precio={precio}
+            stock={stock}
+            preciooferta={preciooferta}
+          />
           ))  
         ) 
-        :    (  
+        
+        :(  
           <>
           <CarouselSales breakPoints={BreakPoints}>
           <SqueletonsProducts/>
@@ -57,7 +59,7 @@ const Sales_Carousel = ({uripath}) => {
           <SqueletonsProducts/>
           </CarouselSales>
           </>
-      )
+         )
     }   
     </CarouselSales>
 

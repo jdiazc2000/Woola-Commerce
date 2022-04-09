@@ -6,7 +6,7 @@ import Carousel from "./sections/carousel"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
-import Salescarousel from "../pages/components/Sales_Carousel/Sales_Carousel"
+import Salescarousel from "../pages/sections/Sales_Carousel"
 
 const Home = () => {
 
@@ -23,7 +23,6 @@ const Home = () => {
             <div>
 
                 {/*Banner*/}
-
                 <Carousel />
 
                 {/*Sales_Title*/}

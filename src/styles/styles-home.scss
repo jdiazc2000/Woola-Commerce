@@ -47,23 +47,48 @@ svg {
 #Carousel {
 	margin-top: 75px;
 	width: 100%;
-	justify-content: center;
-	text-align: start;
 	background-color: rgb(32, 32, 32);
-
 
 	.Text {
 		height: 700px;
-		width: 50%;
+		width: 100%;
 		display: grid;
 		place-content: center;
-		text-align: center;
+		text-align: end;
 
 		h2 {
 			margin-left: 30px;
 			margin-right: 30px;
+			border: solid blue 2px;
+			width: 50%;
 			color: white;
 		}
+
+		p{
+			margin: 10px;
+			color: white;
+			font-size: 25px;
+			font-weight: 100;
+		}
+
+		button{
+			margin: 10px;
+			padding: 5px;
+			border: none;
+			background-color: $primary-color;
+			color: white;
+			border-radius: 10px;
+			font-size: 30px;
+
+			&:hover,&:focus{
+				color: $primary-color;
+				border: solid 2px $primary-color;
+				background-color: white;
+				transition: ease-out 0.2s;
+			}
+		}
+
+	
 	}
 
 	@media (max-width: 536px) {

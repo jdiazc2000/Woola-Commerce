@@ -136,10 +136,16 @@ form .Radio_colors .Color_div .input-hidden {
   display: none;
 }
 
+form .Radio_colors .Color_div input[type=radio]:hover + label > img {
+  border: #8F00FF 0.2em solid;
+  -webkit-transition: border 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: border 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 form .Radio_colors .Color_div input[type=radio]:checked + label > img {
-  border: 3px solid black;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  border: #8F00FF 0.2em solid;
+  -webkit-transition: border 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: border 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 form .Radio_colors .Color_div img {

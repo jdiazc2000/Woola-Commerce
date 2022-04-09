@@ -25,7 +25,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
       console.table(data);
 
       reset();
-    }, 2000);
+    }, 5000);
     return () => clearTimeout(buytimer);
   }
 
@@ -74,7 +74,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                             name="colores"
                             type="radio"
                             className="input-hidden"
-                            {...register('color')}
+                            {...register('color', { required: true})} 
                             defaultValue={colores.color1}
                           />
                           <label htmlFor={`color1-${id}`}>
@@ -110,6 +110,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                           </label>
                       </div>
                     </div>
+                    {errors.color?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
                   </div>
 
                   <div className="ComboBoxes"> 
@@ -210,7 +211,8 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
 
                   <div className="modal-footer" style={{ justifyContent: "center" }}>
                     {
-                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra...</button> : <button type="submit" className="btn btn-secondary mr-auto" >Procesar Compra</button>
+                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra... </button> :
+                      <button type="submit" className="btn btn-secondary mr-auto" >Procesar compra</button>
                     }
                     <label className="btn btn-secondary mr-auto volver-btn" data-bs-dismiss="modal" onClick={BackBuyModal} >Volver</label>
                   </div>
