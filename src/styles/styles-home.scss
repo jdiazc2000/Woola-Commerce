@@ -334,13 +334,26 @@ svg {
 			border: 2px solid $primary-color;
 			border-radius: 10px;
 
+			.spinner {
+				animation: spin infinite 1.5s linear;
+			  }
+			
+			@keyframes spin {
+			  from {
+				transform: rotate(0deg);
+			  }
+			  to {
+				transform: rotate(360deg);
+			  }
+			}
+
+			
 			&:hover {
 				color: white;
 				box-shadow: inset 0 -100px 0 0 #931deeab;
 				border: 2px solid $primary-color;
 			}
 		}
-
 	}
 
 }

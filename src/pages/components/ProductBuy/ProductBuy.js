@@ -3,6 +3,10 @@ import { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import Swal from "sweetalert2"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
+
 const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
 
   const { register, formState: { errors }, reset, handleSubmit } = useForm();
@@ -110,7 +114,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                           </label>
                       </div>
                     </div>
-                    {errors.color?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
+                    {errors.color?.type === 'required' && <span style={{ color: "red" }}>Por favor elija en producto</span>}
                   </div>
 
                   <div className="ComboBoxes"> 
@@ -211,7 +215,8 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
 
                   <div className="modal-footer" style={{ justifyContent: "center" }}>
                     {
-                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra... </button> :
+                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra... <span><FontAwesomeIcon icon={faSpinner} className="spinner"/></span>
+                      </button> :
                       <button type="submit" className="btn btn-secondary mr-auto" >Procesar compra</button>
                     }
                     <label className="btn btn-secondary mr-auto volver-btn" data-bs-dismiss="modal" onClick={BackBuyModal} >Volver</label>

@@ -229,29 +229,6 @@ form .direction {
   margin-top: 1px;
 }
 
-form .buy-btn {
-  text-align: center;
-}
-
-form .buy-btn button {
-  margin-top: 10px;
-  padding: 7px 10px;
-  background-color: #8F00FF;
-  color: white;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-}
-
-form .buy-btn button:hover {
-  color: #8F00FF;
-  background-color: white;
-  border: solid 2px #8F00FF;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
 form .modal-footer label {
   color: #8F00FF;
   font-weight: 900;
