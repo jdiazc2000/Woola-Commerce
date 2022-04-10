@@ -1,12 +1,19 @@
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
 * {
   margin: 0;
   padding: 0;
-  font-family: "Play", sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
-.h2, h2 {
+.title {
+  text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
+  padding: 5px;
+  text-align: center;
+  color: #8F00FF;
+  font-size: 30px;
+}
+
+.h2,
+h2 {
   font-size: 40px;
 }
 
@@ -17,32 +24,111 @@
   margin-top: 75px;
   padding-bottom: 20px;
 }
-#About-Us .title {
+
+#About-Us .title-section {
   padding: 5px;
   text-align: center;
   color: #8F00FF;
   text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 }
+
 #About-Us .squares-section {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   padding-top: 10px;
 }
+
 #About-Us .squares-section .squares {
   width: 300px;
   height: 285px;
   text-align: center;
   margin: 0 auto;
 }
+
 #About-Us .squares-section .squares img {
   width: 125px;
   padding-top: 20px;
 }
+
 #About-Us .squares-section .squares h2 {
   margin-top: 15px;
   font-size: 22px;
   text-align: justify;
+}
+
+#Reviews .Motion_Div_Reviews {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+#Reviews .ReviewCard {
+  border-radius: 25px;
+  padding: 50px 60px 10px 40px;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border: solid 3px #8F00FF;
+  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#Reviews .ReviewCard .Text {
+  text-align: left;
+  height: 120px;
+  color: black;
+  text-shadow: none;
+}
+
+#Reviews .ReviewCard .Photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Reviews .ReviewCard .Photo img {
+  width: 80px;
+  height: 80px;
+  border: solid 3px #8F00FF;
+  border-radius: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+}
+
+#Reviews .ReviewCard .Photo img:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#Reviews .ReviewCard .Name_Job {
+  text-align: left;
+  margin-top: 8px;
+  color: black;
+  text-shadow: none;
+}
+
+#Reviews .ReviewCard .Name_Job h3 {
+  font-size: 23px;
+}
+
+#Reviews .ReviewCard .Name_Job p {
+  white-space: pre-wrap;
 }
 
 /* About Us */
@@ -52,29 +138,54 @@
   height: 100%;
   padding-bottom: 20px;
 }
-#Ubication .title {
-  text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
-  padding: 5px;
-  text-align: center;
-  color: #8F00FF;
-  font-size: 30px;
-}
+
 #Ubication .map {
   text-align: center;
 }
+
 #Ubication .map .iframe {
   border: solid red 2px;
 }
 
-/* Ubication */
 @media (max-width: 990px) {
   #About-Us .squares-section {
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 }
-@media (max-width: 655px) {
+
+@media (max-width: 990px) and (max-width: 655px) {
   #About-Us .squares-section {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
-}/*# sourceMappingURL=styles-nosotros.css.map */
+}
+
+@media (max-width: 1568px) {
+  #Reviews .Motion_Div_Reviews {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1568px) and (max-width: 1042px) {
+  #Reviews .Motion_Div_Reviews {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1568px) and (max-width: 1042px) and (max-width: 540px) {
+  #Reviews .Motion_Div_Reviews .ReviewCard {
+    padding: 50px 25px 10px 25px;
+  }
+  .Photo {
+    margin-top: 50px;
+  }
+  .Text p {
+    font-size: 15px;
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=styles-nosotros.css.map */

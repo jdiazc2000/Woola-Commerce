@@ -1,6 +1,3 @@
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Play:wght@700&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Play&family=Source+Code+Pro:ital,wght@1,300&family=Ubuntu:wght@500&display=swap";
-
 $primary-color: #8F00FF;
 
 * {
@@ -9,7 +6,16 @@ $primary-color: #8F00FF;
 	font-family: 'Play', sans-serif;
 }
 
-.h2,h2{
+.title {
+	text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
+	padding: 5px;
+	text-align: center;
+	color: $primary-color;
+	font-size: 30px;
+}
+
+.h2,
+h2 {
 	font-size: 40px;
 }
 
@@ -20,7 +26,7 @@ $primary-color: #8F00FF;
 	margin-top: 75px;
 	padding-bottom: 20px;
 
-	.title {
+	.title-section {
 		padding: 5px;
 		text-align: center;
 		color: $primary-color;
@@ -32,24 +38,100 @@ $primary-color: #8F00FF;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 30px;
 		padding-top: 10px;
+
 		.squares {
 			width: 300px;
 			height: 285px;
 			text-align: center;
 			margin: 0 auto;
+
 			img {
 				width: 125px;
 				padding-top: 20px;
 			}
 		}
 
-		.squares h2{
+		.squares h2 {
 			margin-top: 15px;
 			font-size: 22px;
 			text-align: justify;
 		}
 	}
 }
+
+
+#Reviews {
+
+	.Motion_Div_Reviews {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 15px;
+		padding-top: 10px;
+	}
+
+	.ReviewCard {
+		border-radius: 25px;
+		padding: 50px 60px 10px 40px;
+		background-color: white;
+		width: 80%;
+		text-align: center;
+		border: solid 3px $primary-color;
+		box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+		align-self: center;
+		justify-self: center;
+
+
+		.Text {
+			text-align: left;
+			height: 120px;
+			color: black;
+			text-shadow: none;
+		}
+
+		.Photo {
+			display: flex;
+		}
+
+		.Photo img {
+			width: 80px;
+			height: 80px;
+			border: solid 3px $primary-color;
+			border-radius: 50px;
+			margin-right: 20px;
+			cursor: pointer;
+
+			box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+			-webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+			-moz-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+
+
+			&:hover {
+				filter: brightness(80%);
+				transition: 0.3s ease;
+
+			}
+		}
+
+		.Name_Job {
+			text-align: left;
+			margin-top: 8px;
+			color: black;
+			text-shadow: none;
+
+			h3 {
+				font-size: 23px;
+			}
+
+			p {
+				white-space: pre-wrap;
+			}
+
+		}
+	}
+}
+
+
+
 /* About Us */
 
 /* Ubication */
@@ -57,35 +139,64 @@ $primary-color: #8F00FF;
 	background-color: #F0F0F0;
 	height: 100%;
 	padding-bottom: 20px;
-	.title {
-		text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
-		padding: 5px;
-		text-align: center;
-		color: $primary-color;
-		font-size: 30px;
-	}
+
 	.map {
 		text-align: center;
+
 		.iframe {
 			border: solid red 2px;
 		}
 	}
 }
-/* Ubication */
 
 
-@media (max-width: 990px ) {
+@media (max-width: 990px) {
 	#About-Us {
 		.squares-section {
 			grid-template-columns: 1fr 1fr;
 			gap: 10px;
 		}
 	}
-}
-@media (max-width: 655px ) {
-	#About-Us {
-		.squares-section {
-			grid-template-columns: 1fr;
+
+	@media (max-width: 655px) {
+		#About-Us {
+			.squares-section {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
+}
+
+
+@media (max-width: 1568px) {
+	
+	
+	#Reviews .Motion_Div_Reviews {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: 1042px) {
+		#Reviews .Motion_Div_Reviews {
+			grid-template-columns: 1fr;
+		}
+
+		@media (max-width: 540px) {
+
+			#Reviews .Motion_Div_Reviews .ReviewCard {
+				padding: 50px 25px 10px 25px;
+			}
+
+			.Photo {
+				margin-top: 50px;
+			}
+
+			.Text {
+				p {
+					font-size: 15px;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
 }

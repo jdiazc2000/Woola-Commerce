@@ -17,6 +17,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
   const onSubmit = (data) => {
 
     setButtontextonbuy(true);
+
     const buytimer = setTimeout(() => {
       Swal.fire
         (
@@ -24,6 +25,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
           'Pronto nos comunicaremos contigo :)',
           'success'
         )
+
       setButtontextonbuy(false);
 
       console.table(data);
@@ -73,51 +75,51 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                   <div className="Radio_colors">
                     <div className="Color_div">
                       <div className="Color_div_value">
-                          <input
-                            id={`color1-${id}`}
-                            name="colores"
-                            type="radio"
-                            className="input-hidden"
-                            {...register('color', { required: true})} 
-                            defaultValue={colores.color1}
-                          />
-                          <label htmlFor={`color1-${id}`}>
+                        <input
+                          id={`color1-${id}`}
+                          name="colores"
+                          type="radio"
+                          className="input-hidden"
+                          {...register('color', { required: true })}
+                          defaultValue={colores.color1}
+                        />
+                        <label htmlFor={`color1-${id}`}>
                           <img src={imagen.img1} alt="imgcolor1"></img>
-                          </label>
+                        </label>
                       </div>
 
                       <div className="Color_div_value">
-                          <input
-                            id={`color2-${id}`}
-                            name="colores"
-                            type="radio"
-                            className="input-hidden"
-                            {...register('color')}
-                            defaultValue={colores.color2}
-                          />                       
-                          <label htmlFor={`color2-${id}`}>
+                        <input
+                          id={`color2-${id}`}
+                          name="colores"
+                          type="radio"
+                          className="input-hidden"
+                          {...register('color')}
+                          defaultValue={colores.color2}
+                        />
+                        <label htmlFor={`color2-${id}`}>
                           <img src={imagen.img2} alt="imgcolor2"></img>
-                          </label>
+                        </label>
                       </div>
 
                       <div className="Color_div_value">
-                          <input
-                            id={`color3-${id}`}
-                            name="colores"
-                            type="radio"
-                            className="input-hidden"
-                            {...register('color')}
-                            defaultValue={colores.color3}
-                          />
-                          <label htmlFor={`color3-${id}`}>
+                        <input
+                          id={`color3-${id}`}
+                          name="colores"
+                          type="radio"
+                          className="input-hidden"
+                          {...register('color')}
+                          defaultValue={colores.color3}
+                        />
+                        <label htmlFor={`color3-${id}`}>
                           <img src={imagen.img3} alt="imgcolor3"></img>
-                          </label>
+                        </label>
                       </div>
                     </div>
                     {errors.color?.type === 'required' && <span style={{ color: "red" }}>Por favor elija en producto</span>}
                   </div>
 
-                  <div className="ComboBoxes"> 
+                  <div className="ComboBoxes">
                     <label htmlFor="talla">Talla:</label>
                     <select
                       name="talla"
@@ -134,7 +136,7 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                       max={stock}
                       title="stock-buy"
                       {...register('stock-buy')} />
-                   </div>
+                  </div>
 
                   <div className="name-last">
                     <p>Datos del titular:</p>
@@ -215,9 +217,9 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
 
                   <div className="modal-footer" style={{ justifyContent: "center" }}>
                     {
-                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra... <span><FontAwesomeIcon icon={faSpinner} className="spinner"/></span>
+                      buttontextonbuy ? <button className="btn btn-secondary mr-auto" type="button">Procesando compra... <span><FontAwesomeIcon icon={faSpinner} className="spinner" /></span>
                       </button> :
-                      <button type="submit" className="btn btn-secondary mr-auto" >Procesar compra</button>
+                        <button type="submit" className="btn btn-secondary mr-auto" >Procesar compra</button>
                     }
                     <label className="btn btn-secondary mr-auto volver-btn" data-bs-dismiss="modal" onClick={BackBuyModal} >Volver</label>
                   </div>

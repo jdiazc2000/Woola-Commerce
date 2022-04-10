@@ -11,7 +11,7 @@ const Carousel = () => {
 
           <h2>Haz tus compras online en Woola Commerce y
             encuentra las mejores ofertas en moda.
-            <span><p>Aprovecha nuestro catálogo de invierno</p></span>
+            <span><p>Aprovecha nuestro catálogo de invierno!</p></span>
             
             <button> Ir al catálogo</button>
           </h2>
