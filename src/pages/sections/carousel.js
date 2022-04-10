@@ -20,11 +20,12 @@ const Carousel = () => {
       </motion.div>
 
       <div className="Carousel_IMG">
-        <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ type: "spring", duration: 1.5 }}>
-          
-          <h1>Images</h1>
 
-        </motion.div>
+                  
+        <h1>Images</h1>
+        { /*    <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ type: "spring", duration: 1.5 }}>
+        </motion.div> */ }
+     
       </div>
     </div>
   );
