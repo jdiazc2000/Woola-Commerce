@@ -24,8 +24,6 @@ const AboutUs = () => {
                     type: 'fade', duration: 1
                 }
             })
-        }else{
-            animation.start({ opacity: 0 })
         }
 
     }, [inView, animation]);
