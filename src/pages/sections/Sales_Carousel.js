@@ -2,6 +2,7 @@
 import SqueletonsProducts from "../components/ProductCard-Squeleton/CardSqueleton"
 import CarouselSales from 'react-elastic-carousel'
 import { useEffect,useState } from "react"
+import { motion } from "framer-motion"
 import ProductCard from "../components/ProductCard/ProductCard"
 
 const Sales_Carousel = ({uripath}) => {
@@ -38,6 +39,7 @@ const Sales_Carousel = ({uripath}) => {
   
         (
           products.map(({id,tipo,marca,imagen,stock,precio,preciooferta}) => (
+            <motion.div  key = {id} initial={{scale:0.8}} animate={{ scale: 1}} transition={{ type: "spring", stiffness: 100 }} >
             <ProductCard key={id}
             id={id}
             tipo={tipo}
@@ -47,6 +49,7 @@ const Sales_Carousel = ({uripath}) => {
             stock={stock}
             preciooferta={preciooferta}
           />
+          </motion.div>
           ))  
         ) 
         
