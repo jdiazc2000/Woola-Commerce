@@ -56,17 +56,17 @@ svg {
 		height: 700px;
 		display: grid;
 		place-content: center;
-		text-align: end;
 		border: solid blue 2px;
 
 		.Text {
 			width: 100%;
 
+
 			h2 {
-				margin-left: 30px;
-				margin-right: 30px;
+				border: solid red 2px;
 				width: 90%;
 				color: white;
+				margin: 0 auto;
 			}
 
 			p {
@@ -122,7 +122,6 @@ svg {
 @media (max-width: 800px) {
 	#Carousel {
 		display: block;
-		background-color: green;
 	}
 
 	#Carousel .Text_div{
