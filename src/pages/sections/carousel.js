@@ -14,7 +14,7 @@ const Carousel = () => {
               encuentra las mejores ofertas en moda.
               <span><p>Aprovecha nuestro catálogo de invierno!</p></span>
 
-              <button><a>Ir al catálogo</a></button>
+              <button><a href="#/catalogo">Ir al catálogo</a></button>
             </h2>
           </div>
         </div>
