@@ -84,18 +84,20 @@ svg {
 				color: white;
 				border-radius: 10px;
 				font-size: 30px;
+				color: white;
+				
 
 				&:hover,
-				&:focus {
+				&:focus{
 					color: $primary-color;
 					border: solid 2px $primary-color;
 					background-color: white;
-					transition: ease-out 0.2s;
+					transition: ease-out 0.2s;			
 				}
 
-				a{
+				a:hover{
 					color: red;
-				}
+				} 
 
 			}
 

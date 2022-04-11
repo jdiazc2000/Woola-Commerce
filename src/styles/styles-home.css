@@ -81,6 +81,7 @@ svg {
   color: white;
   border-radius: 10px;
   font-size: 30px;
+  color: white;
 }
 
 #Carousel .Text_div .Text button:hover, #Carousel .Text_div .Text button:focus {
@@ -91,7 +92,7 @@ svg {
   transition: ease-out 0.2s;
 }
 
-#Carousel .Text_div .Text button a {
+#Carousel .Text_div .Text button a:hover {
   color: red;
 }
 

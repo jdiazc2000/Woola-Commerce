@@ -25,7 +25,6 @@ const AboutUs = () => {
                 }
             })
         }
-
     }, [inView, animation]);
 
     return (
@@ -48,7 +47,7 @@ const AboutUs = () => {
                 {/*Reviews-TItle */}
                 <div className="title-section">
 
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: "spring", stiffness: 100 }}>
+                    <motion.div initial={{ x: -40 }} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100 }}>
                         <h2>Opiniones</h2>
                     </motion.div>
 

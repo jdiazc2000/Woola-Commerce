@@ -68,6 +68,13 @@ html {
 			transition: all .5s ease;
 		   }
 		   
+
+		   @media (max-width: 941px){
+			   button{
+				   margin: 5px 5px;
+			   }
+		   }
+
 		   button:hover {
 			letter-spacing: 3px;
 			background-color: $primary-color;

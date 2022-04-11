@@ -112,6 +112,7 @@ nav h1 span {
   }
   .nav-menu-item {
     line-height: 70px;
+    padding: 9px 0;
   }
   .nav-link {
     margin-right: 0px;
