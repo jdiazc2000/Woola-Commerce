@@ -46,7 +46,7 @@ svg {
   width: 100%;
   background-color: #202020;
   place-content: center;
-  text-align: end;
+  text-align: center;
 }
 
 #Carousel .Text_div {
@@ -54,7 +54,6 @@ svg {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  border: solid blue 2px;
 }
 
 #Carousel .Text_div .Text {
@@ -103,7 +102,6 @@ svg {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  border: solid 2px red;
   width: 90%;
 }
 
