@@ -61,7 +61,6 @@ svg {
 }
 
 #Carousel .Text_div .Text h2 {
-  border: solid red 2px;
   width: 90%;
   color: white;
   margin: 0 auto;
@@ -90,6 +89,10 @@ svg {
   background-color: white;
   -webkit-transition: ease-out 0.2s;
   transition: ease-out 0.2s;
+}
+
+#Carousel .Text_div .Text button a {
+  color: red;
 }
 
 @media (max-width: 836px) {
