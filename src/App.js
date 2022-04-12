@@ -5,6 +5,7 @@ import Catalogo from "./pages/catalogo";
 import Page404 from "./pages/Page404"
 import { motion } from "framer-motion"
 //import {HashRouter  as Router, Route, Routes, NavLink} from "react-router-dom";
+//a
 import {BrowserRouter  as Router, Route, Routes, NavLink} from "react-router-dom";
 
 const openMenu = () => {
