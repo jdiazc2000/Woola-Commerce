@@ -4,6 +4,15 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 const Page404 = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+
     return (
         <div id="Error404_Div">
             <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ type: "spring", duration: 1 }}>
@@ -11,7 +20,7 @@ const Page404 = () => {
             </motion.div>
             <h1> WOW ¿Cómo llegaste hasta allí?</h1>
             <span>¡Se redireccionado a la página principal con este bóton!</span>
-            <Link to="/"><button id="Catalogo_Label" title="Catalogo_Button"><p>Ayúdame a volver</p></button></Link>
+            <Link to="/"><button id="Catalogo_Label" title="Catalogo_Button" onClick={scrollToTop} ><p>Ayúdame a volver</p></button></Link>
         </div>
 
     )

@@ -2,10 +2,12 @@
 import "../styles/styles-catalogo.scss"
 import "../styles/styles-nosotros.scss"
 
+import NavBarStructura from "../pages/components/NavBarStructure/NavBarStructure"
 import Modals from "./sections/modals"
 import BuyModals from "./sections/modalsbuy"
 import CatalogoProducts from "./sections/CatalogoProducts"
 import Footer from "./sections/footer"
+
 import { motion } from "framer-motion"
 
 
@@ -28,6 +30,8 @@ const Catalogo = () => {
 
     return (
         <>
+            <NavBarStructura />
+
             <div id="Catalogo">
 
                 {/*Catalogo-title */}
@@ -48,7 +52,7 @@ const Catalogo = () => {
 
 
                 {/*Product card */}
-                <CatalogoProducts/>
+                <CatalogoProducts />
 
                 {/*Products  modals - modal-buy*/}
                 <Modals />

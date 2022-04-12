@@ -1,3 +1,5 @@
+
+import NavBarStructura from "../pages/components/NavBarStructure/NavBarStructure"
 import ReviewCards from "./components/ReviewsCards/ReviewCards"
 import AboutSquares from "./sections/about_squares"
 import Footer from "./sections/footer"
@@ -29,7 +31,8 @@ const AboutUs = () => {
 
     return (
         <>
-
+            <NavBarStructura />
+            
             <div id="About-Us">
 
                 {/*AboutUs-Title */}
