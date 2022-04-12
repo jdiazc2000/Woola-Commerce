@@ -19,7 +19,7 @@ const Page404 = () => {
                 <img src={Ovni} alt="Ovni"></img>
             </motion.div>
             <h1> WOW ¿Cómo llegaste hasta allí?</h1>
-            <span>¡Se redireccionado a la página principal con este bóton!</span>
+            <span>¡Se redireccionado a la página principal con este botón!</span>
             <Link to="/"><button id="Catalogo_Label" title="Catalogo_Button" onClick={scrollToTop} ><p>Ayúdame a volver</p></button></Link>
         </div>
 
