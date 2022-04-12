@@ -27,11 +27,11 @@ const Footer = () => {
 <div className="footer-left">
 
     <p className="footer-links">
-        <a href="#/" onClick={scrollToTop}>Inicio</a> -
+        <a href="/" onClick={scrollToTop}>Inicio</a> -
 
-        <a href="#/aboutus" onClick={scrollToTop} >Sobre nosotros</a> -
+        <a href="/aboutus" onClick={scrollToTop} >Sobre nosotros</a> -
 
-        <a href="#/catalogo" onClick={scrollToTop}>Catálogo</a>
+        <a href="/catalogo" onClick={scrollToTop}>Catálogo</a>
 
     </p>
 
