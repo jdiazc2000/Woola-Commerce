@@ -136,15 +136,16 @@ h2 {
 	background-color: #F0F0F0;
 	height: 100%;
 	padding-bottom: 20px;
-
-	.map {
-		text-align: center;
-
-		.iframe {
-			border: solid red 2px;
-		}
-	}
 }
+
+.MapContainer {
+	display: grid;
+	place-items: center;
+	margin: 0 auto;
+	width: 80%;
+	height: 450px;
+}
+
 
 
 @media (max-width: 990px) {
@@ -166,8 +167,8 @@ h2 {
 
 
 @media (max-width: 1568px) {
-	
-	
+
+
 	#Reviews .Motion_Div_Reviews {
 		grid-template-columns: 1fr 1fr;
 	}

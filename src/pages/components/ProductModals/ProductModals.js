@@ -3,7 +3,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-const ProductModals= ({id,tipo,marca,imagen,preciooferta,genero,colores,descripción,precio,stock,talla}) => {
+const ProductModals= ({id,tipo,marca,imagen,preciooferta,genero,colores,descripción,precio,stock}) => {
 
     return(
         <>
@@ -18,26 +18,25 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,genero,colores,descripc
       </div>
       <div className="modal-body">
           
-      <Carousel showStatus={false} showArrows={false} showIndicators={false}>
+      <Carousel showStatus={false} showArrows={false} showIndicators={false} >
                 <div>
                     <img src={imagen.img1} alt={`ProductImg1_${id}`} />
-                    <p className="legend">Legend 1</p>
                 </div>
                 <div>
                     <img src={imagen.img2}  alt={`ProductImg2_${id}`} />
-                    <p className="legend">Legend 1</p>
                 </div>
                 <div>
                     <img src={imagen.img3} alt={`ProductImg3_${id}`} />
                 </div>
       </Carousel>
 
-          <p>Colores: <b>{colores.color1},{colores.color2},{colores.color3}</b></p> 
-          <p>Género: <span><b>{genero}</b></span></p>
-          <p>Talla: <b>{talla}</b></p>
-          <p><span><b>{descripción}</b></span></p>
-          <p>Precio: <span><b>{preciooferta ?  `$${preciooferta}` : `$${precio}`}</b></span></p>
-          <p>Stock: <span><b>{stock}</b></span></p>
+      <div className="Attributes">
+          <p>Colores: <b>{colores.color1}, {colores.color2}, {colores.color3}</b></p> 
+          <p>Género: {genero}</p>
+          <p>Tipo: {descripción}</p>
+          <p>Precio: {preciooferta ?  `$${preciooferta}` : `$${precio}`}</p>
+          <p>Stock disponible: {stock}</p>
+      </div>
       </div>
       <div className="modal-footer">
       <button type="button" className="btn btn-secondary mr-auto" data-bs-toggle="modal" data-bs-target={`#exampleModalBuy${id}`}>Comprar</button>

@@ -139,12 +139,13 @@ h2 {
   padding-bottom: 20px;
 }
 
-#Ubication .map {
-  text-align: center;
-}
-
-#Ubication .map .iframe {
-  border: solid red 2px;
+.MapContainer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 450px;
 }
 
 @media (max-width: 990px) {

@@ -27,7 +27,7 @@ const Modals = () => {
     <>
         <div>
         {
-             modals.map(({id,tipo,marca,preciooferta,imagen,colores,genero,talla,descripción,precio,stock}) => (
+             modals.map(({id,tipo,marca,preciooferta,imagen,colores,genero,descripción,precio,stock}) => (
                 <ProductModals
                        key = {id}
                        id={id}
@@ -38,7 +38,6 @@ const Modals = () => {
                        preciooferta={preciooferta}
                        colores={colores}
                        genero={genero}
-                       talla={talla}
                        descripción={descripción}
                        stock={stock}
                    />

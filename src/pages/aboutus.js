@@ -32,7 +32,7 @@ const AboutUs = () => {
     return (
         <>
             <NavBarStructura />
-            
+
             <div id="About-Us">
 
                 {/*AboutUs-Title */}
@@ -71,13 +71,22 @@ const AboutUs = () => {
             </div>
 
             {/*Map*/}
-            <Map />
+            <div id="Ubication">
+                <div className="title">
+                    <motion.div initial={{ x: -40 }} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100 }}>
+                        <h2>Ubicación</h2>
+                    </motion.div>
+                </div>
+
+                <Map />
+            </div>
+
 
             {/*Footer */}
             <Footer />
-        </>
-    )
+            </>
+            )
 
 }
 
-export default AboutUs
+            export default AboutUs

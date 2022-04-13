@@ -1,15 +1,19 @@
 import "../../styles/styles-home.scss"
 import { Link } from "react-router-dom"
-
+import bgImage from "../videos/backgroundVideo.mp4"
 
 const Carousel = () => {
 
   return (
     <div id="Carousel">
 
+      <video autoPlay loop muted>
+          <source src={bgImage} type="video/mp4"></source>
+      </video>
+
         <div className="Text_div">
           <div className="Text">
-            <h2>Haz tus compras online en Woola Commerce y
+            <h2>Realiza tus compras online en Woola Commerce y
               encuentra las mejores ofertas en moda.
               <span><p>Aprovecha nuestro catálogo de invierno!</p></span>
 
@@ -17,19 +21,6 @@ const Carousel = () => {
             </h2>
           </div>
         </div>
-   
-
-        { /*    <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ type: "spring", duration: 1.5 }}>
-        </motion.div> 
-        
-           <div className="Carousel_IMG">
-        
-        <img src="{Imagen1}" alt="png"></img>
-        
-        */ 
-        
-        }
-
      
       </div>
 
