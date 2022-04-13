@@ -325,6 +325,7 @@ svg {
 .modal-content .modal-header {
   border-bottom: solid 2px #8F00FF;
   padding: 0.3rem 1rem;
+  text-align: center;
 }
 
 .modal-content .modal-title {

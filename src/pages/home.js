@@ -10,7 +10,6 @@ import Carousel from "./sections/carousel"
 import NavBarStructura from "../pages/components/NavBarStructure/NavBarStructure"
 
 
-
 const Home = () => {
 
     const scrollToTop = () => {
@@ -39,7 +38,7 @@ const Home = () => {
                     </div>
 
                     {/*Carousel_Products */}
-                    <Salescarousel uripath={"catalogo?Oferta_like=SI"} />
+                    <Salescarousel/>
                     <Modals />
                     <BuyModals />
 

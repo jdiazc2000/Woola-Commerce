@@ -5,7 +5,7 @@ import { useEffect,useState } from "react"
 import { motion } from "framer-motion"
 import ProductCard from "../components/ProductCard/ProductCard"
 
-const Sales_Carousel = ({uripath}) => {
+const Sales_Carousel = () => {
     const [products,setProducts] = useState()
 
     const BreakPoints= [
@@ -19,17 +19,18 @@ const Sales_Carousel = ({uripath}) => {
       const controller = new AbortController();
       const signal = controller.signal;
   
-         fetch(`https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/${uripath}`, { signal: signal })
+         fetch('https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo?Oferta_like=SI', { signal: signal })
         .then((data) => data.json())
         .then((data) => setProducts(data))
         .catch((err) => {
           if (err.name === "AbortError") {
           } else {
             console.log('Error al fetch')
+            window.location.href = "../apifail"
           }
         });
       return () => controller.abort();
-    }, [uripath]);
+    }, []);
 
     return(
 

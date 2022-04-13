@@ -10,25 +10,31 @@
   text-align: center;
 }
 
-#Error404_Div img {
+#Error404_Div .Error404_Text {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 15px;
+}
+
+#Error404_Div .Error404_Text img {
   margin: 0 auto;
   max-width: 500px;
   width: 100vw;
   height: 400px;
 }
 
-#Error404_Div h1 {
+#Error404_Div .Error404_Text h1 {
   color: white;
 }
 
-#Error404_Div span {
+#Error404_Div .Error404_Text span {
   color: white;
   font-size: 20px;
-  margin-bottom: 10px;
 }
 
-#Error404_Div button {
+#Error404_Div .Error404_Text button {
   border: none;
+  margin-top: 15px;
   padding: 5px 5px;
   border-radius: 5px;
   background-color: red;

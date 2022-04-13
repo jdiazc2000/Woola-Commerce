@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard/ProductCard"
 import ProductCardEsqueleton from "../components/ProductCard-Squeleton/CardSqueleton"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPerson,faPersonDress } from '@fortawesome/free-solid-svg-icons'
+import { faPerson,faPersonDress, faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 const CatalogoProducts = () => {
   const [products, setProducts] = useState([])
@@ -16,14 +16,17 @@ const CatalogoProducts = () => {
     setLoading(true)
 
     const getProducts = async () => {
-      const response = await fetch('https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo');
+      try{
+        let response = await fetch(`https://my-json-server.typicode.com/jdiazc2000/WOOLA-COMMERCE-API/catalogo`);
 
-      if (componentMounted) {
-        setProducts(await response.clone().json());
-        setFilter(await response.json())
-        setLoading(false)
+        if (componentMounted) {
+          setProducts(await response.clone().json());
+          setFilter(await response.json())
+          setLoading(false)
+        }
+      }catch(err){
+        window.location.href = "../apifail"
       }
-
     }
 
     getProducts();
@@ -45,6 +48,11 @@ const CatalogoProducts = () => {
     setFilter(updatedList);
   }
 
+  const filterProductOferta = (Oferta) => {
+    const updatedList = products.filter((x) => x.Oferta === Oferta);
+    setFilter(updatedList);
+  }
+
   const Loading = () => {
     return (
       <>
@@ -63,6 +71,7 @@ const CatalogoProducts = () => {
       <>
         <div className="ButtonDiv">
           <button onClick={() => setFilter(products)}> Todos </button>
+          <button onClick={() => filterProductOferta('SI')}> Oferta <span><FontAwesomeIcon icon={faCartArrowDown}/></span> </button>
           <button onClick={() => filterProductGenero('Masculino')}> Masculino <span><FontAwesomeIcon icon={faPerson}/></span> </button>
           <button onClick={() => filterProductGenero('Femenino')}> Femenino <span><FontAwesomeIcon icon={faPersonDress}/></span> </button>
           <button onClick={() => filterProductMarca('Gucci')}> Gucci  </button>

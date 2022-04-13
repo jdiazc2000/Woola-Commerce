@@ -1,0 +1,25 @@
+body{
+
+    #APIFAIL_DIV{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(104, 104, 104);
+    place-content: center;
+    text-align: center;
+
+    h1{
+        color: white;
+    }
+
+    p{
+        font-weight: 800;
+        color: white;
+    }
+
+    img{
+        width: 100%;
+        height: 500px;
+    }
+}
+}

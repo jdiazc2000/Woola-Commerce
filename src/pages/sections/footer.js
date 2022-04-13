@@ -1,4 +1,5 @@
 import "../../styles/styles-footer.scss"
+import { NavLink} from "react-router-dom";
 
 
 const Footer = () => {
@@ -27,11 +28,12 @@ const Footer = () => {
 <div className="footer-left">
 
     <p className="footer-links">
-        <a href="/" onClick={scrollToTop}>Inicio</a> -
 
-        <a href="/aboutus" onClick={scrollToTop} >Sobre nosotros</a> -
+        <NavLink to="/" path="true" onClick={scrollToTop}>Inicio</NavLink> -
 
-        <a href="/catalogo" onClick={scrollToTop}>Catálogo</a>
+        <NavLink to="/aboutus" path="true" onClick={scrollToTop} >Sobre nosotros</NavLink> -
+        
+        <NavLink to="/catalogo" path="true" onClick={scrollToTop}>Catálogo</NavLink>
 
     </p>
 

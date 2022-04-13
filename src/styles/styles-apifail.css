@@ -1,0 +1,24 @@
+body #APIFAIL_DIV {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-color: #686868;
+  place-content: center;
+  text-align: center;
+}
+
+body #APIFAIL_DIV h1 {
+  color: white;
+}
+
+body #APIFAIL_DIV p {
+  font-weight: 800;
+  color: white;
+}
+
+body #APIFAIL_DIV img {
+  width: 100%;
+  height: 500px;
+}
+/*# sourceMappingURL=styles-apifail.css.map */
