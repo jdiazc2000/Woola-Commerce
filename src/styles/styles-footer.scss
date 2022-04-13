@@ -9,7 +9,7 @@ $button-bacground: #8F00FF;
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
-	padding: 25px 50px;
+	padding: 25px 50px 1px 50px;
 
   }
   
@@ -17,6 +17,17 @@ $button-bacground: #8F00FF;
 	color: white;
 	font-size: 16px;
 	margin: 0;
+  }
+
+  .footer-bottom{
+	 text-align: center;
+
+	 h2{
+		 color: white;
+		 font-size: 20px;
+		 margin-top: 10px;
+	 }
+	 
   }
 
   /* Footer links */
