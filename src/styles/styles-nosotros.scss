@@ -28,46 +28,53 @@ h2 {
 	margin-top: 75px;
 	padding-bottom: 20px;
 
-	.About_Us_Review{
+	.About_Us_Review {
 		border-radius: 15px;
 		margin: 50px;
 		border: solid 3px $primary-color;
 		display: flex;
 		box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 
-		.img_Box{
+		.img_Box {
 			width: 100%;
 			text-align: center;
 
-			img{
+			img {
 				width: 100%;
 				height: 550px;
 			}
 		}
-		
-		.text_Box{
+
+		.text_Box {
 			width: 100%;
 			display: grid;
 			align-self: center;
 			text-align: center;
 
-			p{
+			p {
 				font-size: 40px;
+				margin: 5px;
 			}
 		}
 	}
 
 
-	@media (max-width: 951px){
-		.About_Us_Review{
+	@media (max-width: 951px) {
+		.About_Us_Review {
 			display: block;
 
-			
-		.img_Box{
-			img{
-				height: 300px;
+
+			.img_Box {
+				img {
+					height: 300px;
+				}
 			}
-		}
+
+			.text_Box{
+				p{
+					font-size: 25px;
+				}
+			}
 		}
 
 
