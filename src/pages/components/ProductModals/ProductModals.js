@@ -20,13 +20,13 @@ const ProductModals= ({id,tipo,marca,imagen,preciooferta,genero,colores,descripc
           
       <Carousel showStatus={false} showArrows={false} showIndicators={false} >
                 <div>
-                    <img src={imagen.img1} alt={`ProductImg1_${id}`} />
+                    <img src={imagen.img1} loading="lazy" alt={`ProductImg1_${id}`} />
                 </div>
                 <div>
-                    <img src={imagen.img2}  alt={`ProductImg2_${id}`} />
+                    <img src={imagen.img2} loading="lazy" alt={`ProductImg2_${id}`} />
                 </div>
                 <div>
-                    <img src={imagen.img3} alt={`ProductImg3_${id}`} />
+                    <img src={imagen.img3} loading="lazy" alt={`ProductImg3_${id}`} />
                 </div>
       </Carousel>
 

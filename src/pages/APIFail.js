@@ -1,4 +1,4 @@
-import Brain from "../pages/imgs/Brain.png"
+import Brain from "../pages/imgs/Brain.webp"
 import "../styles/styles-apifail.scss"
 
 const ApiFail = () => {

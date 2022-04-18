@@ -1,5 +1,5 @@
 import "../styles/styles-page404.scss"
-import Ovni from "../pages/imgs/page-lost.png"
+import Ovni from "../pages/imgs/page-lost.webp"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
