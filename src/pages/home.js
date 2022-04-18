@@ -38,10 +38,12 @@ const Home = () => {
                     </div>
 
                     {/*Carousel_Products */}
-                    <Salescarousel/>
-                    <Modals />
-                    <BuyModals />
-
+                    <section>
+                        <Salescarousel />
+                        <Modals />
+                        <BuyModals />
+                    </section>
+                    
                     {/*Catalog_Button*/}
                     <div className="Catalogo-button">
                         <Link to="/catalogo"><button id="Catalogo_Label" title="Catalogo_Button" onClick={scrollToTop}><p>Catálogo</p></button></Link>

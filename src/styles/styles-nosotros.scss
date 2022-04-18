@@ -6,6 +6,13 @@ $primary-color: #8F00FF;
 	font-family: 'Play', sans-serif;
 }
 
+.h2,
+h2 {
+	font-size: 40px;
+}
+
+
+
 .title {
 	text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
 	padding: 5px;
@@ -14,49 +21,58 @@ $primary-color: #8F00FF;
 	font-size: 30px;
 }
 
-.h2,
-h2 {
-	font-size: 40px;
-}
 
-/* About Us */
 #About-Us {
 	background-color: #F0F0F0;
 	height: 100%;
 	margin-top: 75px;
 	padding-bottom: 20px;
 
-	.title-section {
-		padding: 5px;
-		text-align: center;
-		color: $primary-color;
-		text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
-	}
+	.About_Us_Review{
+		border-radius: 15px;
+		margin: 50px;
+		border: solid 3px $primary-color;
+		display: flex;
+		box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 
-	.squares-section {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 30px;
-		padding-top: 10px;
-
-		.squares {
-			width: 300px;
-			height: 285px;
+		.img_Box{
+			width: 100%;
 			text-align: center;
-			margin: 0 auto;
 
-			img {
-				width: 125px;
-				padding-top: 20px;
+			img{
+				width: 100%;
+				height: 550px;
 			}
 		}
+		
+		.text_Box{
+			width: 100%;
+			display: grid;
+			align-self: center;
+			text-align: center;
 
-		.squares h2 {
-			margin-top: 15px;
-			font-size: 22px;
-			text-align: justify;
+			p{
+				font-size: 40px;
+			}
 		}
 	}
+
+
+	@media (max-width: 951px){
+		.About_Us_Review{
+			display: block;
+
+			
+		.img_Box{
+			img{
+				height: 300px;
+			}
+		}
+		}
+
+
+	}
+
 }
 
 

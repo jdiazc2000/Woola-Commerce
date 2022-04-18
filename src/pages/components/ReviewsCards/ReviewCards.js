@@ -1,11 +1,9 @@
-import { Avatar, fullname, username} from "react-lorem-ipsum";
+import { Avatar, fullname, username } from "react-lorem-ipsum";
 
-const ReviewCards = ({gender}) => {
-
-
+const ReviewCards = ({ gender }) => {
 
     return (
-   
+
         <div className="ReviewCard">
             <div className="Text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id, eius quibusdam voluptatum
@@ -13,7 +11,7 @@ const ReviewCards = ({gender}) => {
             </div>
 
             <div className="Photo">
-                <Avatar gender={gender}/>
+                <Avatar gender={gender} />
                 <div className="Name_Job">
                     <h3>{fullname(gender)}</h3>
                     <p>{`@${username()}`}</p>

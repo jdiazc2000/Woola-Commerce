@@ -1,8 +1,8 @@
 
 import NavBarStructura from "../pages/components/NavBarStructure/NavBarStructure"
 import ReviewCards from "./components/ReviewsCards/ReviewCards"
-import AboutSquares from "./sections/about_squares"
 import Footer from "./sections/footer"
+import AboutUsTextBox from "./sections/AboutUs_TextBox"
 import Map from "./sections/map"
 
 import { motion, useAnimation } from "framer-motion"
@@ -43,19 +43,20 @@ const AboutUs = () => {
                 </div>
 
 
-                {/*AboutUs-Squares */}
-                <AboutSquares />
-
+                {/*AboutUs-TextBox */}
+                <section>
+                    <AboutUsTextBox />
+                </section>
 
                 {/*Reviews-TItle */}
-                <div className="title-section">
-
+                <div className="title">
                     <motion.div initial={{ x: -40 }} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 100 }}>
                         <h2>Opiniones</h2>
                     </motion.div>
+                </div>
 
-
-                    {/*Reviews-Cards */}
+                {/*Reviews-Cards */}
+                <section>
                     <div id="Reviews" ref={ref}>
                         <motion.div animate={animation} className="Motion_Div_Reviews">
                             <ReviewCards gender="male" />
@@ -66,8 +67,8 @@ const AboutUs = () => {
                             <ReviewCards gender="female" />
                         </motion.div>
                     </div>
+                </section>
 
-                </div>
             </div>
 
             {/*Map*/}
@@ -77,16 +78,17 @@ const AboutUs = () => {
                         <h2>Ubicación</h2>
                     </motion.div>
                 </div>
-
+                <section>
                 <Map />
+                </section>
             </div>
 
 
             {/*Footer */}
             <Footer />
-            </>
-            )
+        </>
+    )
 
 }
 
-            export default AboutUs
+export default AboutUs

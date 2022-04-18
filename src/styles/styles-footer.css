@@ -8,13 +8,23 @@
   width: 100%;
   text-align: left;
   font: normal 16px sans-serif;
-  padding: 25px 50px;
+  padding: 25px 50px 1px 50px;
 }
 
 .footer-distributed .footer-left p {
   color: white;
   font-size: 16px;
   margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom h2 {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 /* Footer links */

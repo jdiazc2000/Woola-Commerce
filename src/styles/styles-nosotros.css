@@ -4,6 +4,11 @@
   font-family: 'Play', sans-serif;
 }
 
+.h2,
+h2 {
+  font-size: 40px;
+}
+
 .title {
   text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
   padding: 5px;
@@ -12,12 +17,6 @@
   font-size: 30px;
 }
 
-.h2,
-h2 {
-  font-size: 40px;
-}
-
-/* About Us */
 #About-Us {
   background-color: #F0F0F0;
   height: 100%;
@@ -25,38 +24,47 @@ h2 {
   padding-bottom: 20px;
 }
 
-#About-Us .title-section {
-  padding: 5px;
-  text-align: center;
-  color: #8F00FF;
-  text-shadow: 0px 2px 4px rgba(145, 145, 145, 0.89);
+#About-Us .About_Us_Review {
+  border-radius: 15px;
+  margin: 50px;
+  border: solid 3px #8F00FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 11px rgba(0, 0, 0, 0.6);
 }
 
-#About-Us .squares-section {
+#About-Us .About_Us_Review .img_Box {
+  width: 100%;
+  text-align: center;
+}
+
+#About-Us .About_Us_Review .img_Box img {
+  width: 100%;
+  height: 550px;
+}
+
+#About-Us .About_Us_Review .text_Box {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  padding-top: 10px;
-}
-
-#About-Us .squares-section .squares {
-  width: 300px;
-  height: 285px;
+  -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
-  margin: 0 auto;
 }
 
-#About-Us .squares-section .squares img {
-  width: 125px;
-  padding-top: 20px;
+#About-Us .About_Us_Review .text_Box p {
+  font-size: 40px;
 }
 
-#About-Us .squares-section .squares h2 {
-  margin-top: 15px;
-  font-size: 22px;
-  text-align: justify;
+@media (max-width: 951px) {
+  #About-Us .About_Us_Review {
+    display: block;
+  }
+  #About-Us .About_Us_Review .img_Box img {
+    height: 300px;
+  }
 }
 
 #Reviews .Motion_Div_Reviews {

@@ -47,17 +47,14 @@ const Catalogo = () => {
                     <input type="text" name="buscador" id="buscador" placeholder="Búsqueda.." />
                 </div>
 
+                <section>
+                    {/*Product cards */}
+                    <CatalogoProducts />
 
-                {/*Productos */}
-
-
-                {/*Product card */}
-                <CatalogoProducts />
-
-                {/*Products  modals - modal-buy*/}
-                <Modals />
-                <BuyModals />
-
+                    {/*Products  modals - modal-buy*/}
+                    <Modals />
+                    <BuyModals />
+                </section>
             </div>
 
             {/*Footer */}
