@@ -9,7 +9,7 @@ const Product = ({ id, tipo, marca, imagen, stock, precio, preciooferta }) => {
                 <div className="Catalogo-section listaArticulos">
                     <div className="sale-item articulo" >
                         <div className="sale">
-                            <img src={imagen} alt="prenda" loading="lazy"/>
+                            <img src={imagen} alt="prenda"/>
                             <div className="info">
                                 <h2>{tipo} {marca}</h2>
                                 <h4>{preciooferta ? `$${preciooferta}` : ''}  <span className="oferta"> {preciooferta ? `$${precio}` : <p className="PrecioNormal">${precio}</p>}</span></h4>
