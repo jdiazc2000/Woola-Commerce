@@ -1,6 +1,6 @@
 # Woola Commerce
 
-Woola Commerce Front End Project
+Woola Commerce is my first Front End Project
 
 It is a project made entirely with ReactJS, SASS and more dependencies, as a sample of my progress in Front End development using this library.
 
