@@ -147,6 +147,14 @@ const ProductBuy = ({ id, tipo, marca, imagen, colores, stock, talla }) => {
                       {...register('nomb_apell', { required: true, pattern: /^[^\s]+( [^\s]+)+$/ })} />
                     {errors.nomb_apell?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
                     {errors.nomb_apell?.type === 'pattern' && <span style={{ color: "red" }}>Ingrese nombres y apellidos validos</span>}
+
+                    <p>Celular:</p>
+                    <input
+                        type="text"
+                        name="phone"
+                        placeholder="N° Celular"
+                        {...register('phone', { required: true })} />
+                      {errors.phone?.type === 'required' && <span style={{ color: "red" }}>Por favor rellene este campo</span>}
                   </div>
 
                   <div className="creditcard-info">
