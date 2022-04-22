@@ -56,6 +56,7 @@ h2 {
 
 #About-Us .About_Us_Review .text_Box p {
   font-size: 40px;
+  margin: 5px;
 }
 
 @media (max-width: 951px) {
@@ -64,6 +65,9 @@ h2 {
   }
   #About-Us .About_Us_Review .img_Box img {
     height: 300px;
+  }
+  #About-Us .About_Us_Review .text_Box p {
+    font-size: 25px;
   }
 }
 
