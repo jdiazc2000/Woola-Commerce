@@ -16,7 +16,7 @@ Open http://localhost:3000 to view it in your browser.
 Thanks for see my project :)! 
 
 ## App features 🪐
- - When you buy a product, generate an object with the information from the buy form, you will see this information on the console.
+ - When you buy a product, generate an object with the information from the buy form, you will see this information on console.
 - Example API posted on my Profile :). 
 
 ## Frontend Development 🌞 
