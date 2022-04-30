@@ -23,4 +23,4 @@ Open http://localhost:3000 to view it in your browser.
 ## Tools 🎨 
  ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-Thanks for see my project :)! 
+## Thanks for see my project :)! 
