@@ -13,8 +13,6 @@ To install all the Node Modules.
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 
-Thanks for see my project :)! 
-
 ## App features 🪐
  - When you buy a product, generate an object with the information from the buy form, you will see this information on console.
 - Example API posted on my Profile :). 
@@ -24,3 +22,5 @@ Thanks for see my project :)!
  
 ## Tools 🎨 
  ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+Thanks for see my project :)! 
