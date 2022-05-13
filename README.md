@@ -7,7 +7,7 @@ It is a project made entirely with ReactJS, SASS and more dependencies, as a sam
  
 ## Installation 💡 
 - npm install
-To install all the Node Modules.
+To install all Node Modules.
 
 - npm start
 Runs the app in the development mode.
